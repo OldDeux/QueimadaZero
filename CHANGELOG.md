@@ -38,3 +38,14 @@ O aplicativo pode ajudar na visualização de focos registrados pelos usuários 
 
 Nesse caso, o QueimadaZero funciona como uma ferramenta de apoio, e não como substituto dos sistemas oficiais utilizados pelos profissionais.
 
+## 2.3 Contexto de uso
+
+O QueimadaZero poderá ser usado tanto em áreas urbanas quanto rurais, principalmente em locais onde exista risco de queimadas ou presença de fumaça.
+
+Como parte dos usuários poderá acessar o aplicativo em áreas abertas, com sol forte, fumaça ou até mesmo durante uma ocorrência, a aplicação precisa ser simples e rápida de usar. As informações mais importantes, como focos próximos e alertas, devem aparecer de forma clara e sem exigir muitos passos.
+
+Em áreas rurais também pode existir dificuldade de acesso à internet. Por isso, é importante que algumas informações, como o mapa de focos, possam continuar disponíveis mesmo quando o sinal estiver ruim ou inexistente.
+
+Outro ponto é que o aplicativo poderá ser utilizado em situações diferentes. Um morador pode apenas consultar se existe alguma queimada próxima, enquanto um brigadista pode utilizar a aplicação durante uma atuação em campo. Por isso, o aplicativo precisa funcionar bem em smartphones mais simples e facilitar o acesso às funções principais.
+
+

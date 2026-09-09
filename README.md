@@ -7,7 +7,7 @@ O aplicativo tem como proposta reunir informações sobre queimadas, permitir no
 ## Integrantes
 
 - **Laura de Jesus Lima Brito**
-- **Marcos Guimarães Rocha Junior**
+- **Marcos Araújo Goulart**
 - **Victor Felipe Santos Melo**
 - **Vitória Maíra Evangelista Ribeiro**
 
@@ -23,7 +23,7 @@ Responsável pelos tópicos:
 - Objetivo e proposta de valor;
 - Personalidade, identidade e experiência.
 
-### Marcos Guimarães Rocha Junior
+### Marcos Araújo Goulart
 Responsável pelos tópicos:
 
 - Funcionalidades e características já definidas;

@@ -10,6 +10,7 @@ O aplicativo tem como proposta reunir informações sobre queimadas, permitir no
 - **Marcos Araújo Goulart**
 - **Victor Felipe Santos Melo**
 - **Vitória Maíra Evangelista Ribeiro**
+- **Thaíssa da Silva Araujo**
 
 ## Turma
 
@@ -22,6 +23,7 @@ Responsável pelos tópicos:
 
 - Objetivo e proposta de valor;
 - Personalidade, identidade e experiência.
+- Criação das personas
 
 ### Marcos Araújo Goulart
 Responsável pelos tópicos:
@@ -30,12 +32,14 @@ Responsável pelos tópicos:
 - Restrições e condições;
 - Pontos de atenção;
 - Criação do `CHANGELOG.md`.
+- Criação da pesquisa
 
 ### Victor Felipe Santos Melo
 Responsável por:
 
 - Liderança do grupo;
 - Criação e organização inicial do repositório.
+- Criação de benchmark
 
 ### Vitória Maíra Evangelista Ribeiro
 Responsável por:
@@ -44,6 +48,12 @@ Responsável por:
 - Problema;
 - Público e usuários;
 - Contexto de uso.
+- Criação de benchmark
+
+### Thaíssa da Silva Araujo
+Responsável por:
+
+-Elaboração do slide da atividade 02
 
 ## Organização do projeto
 

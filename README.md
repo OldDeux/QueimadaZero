@@ -28,7 +28,8 @@ Responsável pelos tópicos:
 
 - Funcionalidades e características já definidas;
 - Restrições e condições;
-- Pontos de atenção.
+- Pontos de atenção;
+- Criação do `CHANGELOG.md`.
 
 ### Victor Felipe Santos Melo
 Responsável por:

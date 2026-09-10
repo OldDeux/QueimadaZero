@@ -188,3 +188,28 @@ O sistema poderá utilizar:
 Assim, uma pessoa é avisada sobre um foco próximo mesmo sem estar consultando o mapa naquele momento.
 
 ---
+
+# 4. Objetivo e proposta de valor
+
+O QueimadaZero tem como objetivo ajudar as pessoas a saber quando existe alguma queimada por perto e avisar sobre possíveis riscos. O aplicativo também permite que o próprio usuário informe quando perceber fumaça ou algum foco de incêndio. Com isso, a ideia é facilitar o acesso às informações e ajudar as pessoas a se protegerem mais rápido quando acontecer alguma situação de risco.
+
+# 5. Personalidade, identidade e experiência
+
+As principais definições do aplicativo são alerta, proteção, prevenção, segurança e meio ambiente.
+
+ # 5.1 Personalidade da identidade
+
+ A ideia é que o aplicativo tenha uma identidade mais séria e protetora, já que ele trabalha com um assunto importante e que pode afetar a saúde e a segurança das pessoas.
+
+ # 5.2 Tom da interface
+
+ A interface precisa ser simples e direta, mostrando primeiro o que realmente importa. Por exemplo, quando existir uma queimada próxima, o aviso deve aparecer de forma bem clara e chamativa para o usuário perceber rápido.
+
+ # 5.3 Tom da experiência do usuário
+
+ O uso do aplicativo deve ser fácil e rápido, porque em algumas situações a pessoa pode estar com pressa ou até em uma área com fumaça. Não é ideal ter muitos menus ou passos complicados.
+
+ # 5.4 Como isso influencia a solução
+
+ Tudo isso vai influenciar na forma como as telas serão organizadas. Os alertas precisam ter destaque, os textos não podem ser muito grandes ou complicados e as funções principais devem ficar fáceis de encontrar.
+

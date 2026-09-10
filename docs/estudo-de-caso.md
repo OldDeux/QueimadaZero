@@ -312,6 +312,24 @@ Como o público usa aparelhos básicos, o aplicativo deve ser leve. O mapa offli
 
 O aplicativo **não substitui** os sistemas dos bombeiros e dos órgãos ambientais. Ele é apoio e informação complementar — isso limita o que pode ser prometido ao usuário, especialmente quanto a acionamento de atendimento.
 
+## 7.9 Quantidade de telas e versão do sistema operacional
+
+O estudo de caso não fixa um número de telas nem uma versão mínima de sistema operacional. Ainda assim, essas duas condições ficam indiretamente delimitadas pelo que ele estabelece.
+
+Sobre a **quantidade de telas**, a exigência de resolver as funções principais a partir da primeira tela e em poucos passos (item 3 — Acesso às principais funções) já impede uma estrutura com muitos níveis. O grupo trabalhará com um conjunto enxuto de telas: mapa, detalhe do foco, envio de relato, acompanhamento dos relatos e orientações de proteção.
+
+Sobre a **versão do sistema operacional**, a restrição de atender smartphones simples (item 7.1) aponta para priorizar o Android e para adotar uma versão mínima antiga o suficiente para não excluir aparelhos em uso pelo público rural. Definir esse valor exato é uma decisão da próxima etapa do projeto, não desta análise.
+
+## 7.10 Acessibilidade
+
+O público inclui pessoas com condições de saúde que agravam o risco e usuários de perfis muito distintos, o que torna a acessibilidade uma condição do projeto e não um extra.
+
+* **Cor não pode ser o único código.** O mapa de calor usa o gradiente laranja e vermelho (item 6.2) para indicar intensidade. Para quem tem daltonismo, isso se perde — a intensidade precisa aparecer também em legenda, rótulo ou variação de forma;
+* **Texto ajustável.** O aplicativo deve respeitar o aumento de fonte do sistema sem quebrar o layout, já que parte do público é idosa;
+* **Área de toque generosa.** O uso com uma mão, em movimento e com pressa (item 3 — Ambiente de utilização) exige alvos de toque grandes, o que atende igualmente quem tem limitação motora;
+* **Alerta em mais de um canal.** A combinação de notificação visual, som e vibração (item 3 — Alertas) não deve ser apenas redundância: é o que permite que o alerta chegue a quem não ouve o aviso sonoro ou não pode olhar a tela naquele momento;
+* **Compatibilidade com leitor de tela.** Ícones e botões precisam de descrição textual, principalmente nos elementos do fluxo de relato.
+
 ---
 
 # 8. Pontos de atenção

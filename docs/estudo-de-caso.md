@@ -93,7 +93,7 @@ O QueimadaZero funciona como uma ferramenta de apoio para esses profissionais. A
 
 O aplicativo não substitui os sistemas oficiais já utilizados pelos bombeiros ou órgãos ambientais, mas pode oferecer uma informação complementar.
 
-Esse é o ponto mais incerto do projeto, na minha avaliação. A utilidade real para o profissional depende de haver volume de relatos na região — em uma área com poucos usuários, o mapa vai mostrar quase nada, e o sistema oficial continua sendo a fonte principal.
+Esse é o ponto mais incerto do projeto, na avaliação do grupo. A utilidade real para o profissional depende de haver volume de relatos na região — em uma área com poucos usuários, o mapa vai mostrar quase nada, e o sistema oficial continua sendo a fonte principal.
 
 ### Necessidades
 
@@ -135,7 +135,7 @@ O QueimadaZero será utilizado em situações e ambientes bem diferentes: dentro
 
 Por isso, o aplicativo precisa considerar as condições em que cada usuário acessa a tela.
 
-## Ambiente de utilização
+## 3.1 Ambiente de utilização
 
 Em algumas situações o usuário está em um ambiente tranquilo, apenas consultando o mapa.
 
@@ -148,25 +148,25 @@ Em outras — brigadistas, bombeiros ou moradores próximos de uma ocorrência �
 * Internet instável;
 * Pouco tempo para utilizar o celular.
 
-## Acesso às principais funções
+## 3.2 Acesso às principais funções
 
 As funções mais importantes não devem ficar escondidas em vários menus.
 
 A proposta é que ações como consultar um foco ou informar que está vendo fumaça sejam realizadas com poucos passos. Isso pesa ainda mais porque algumas pessoas vão abrir o aplicativo durante uma situação de risco.
 
-## Uso em áreas com pouco sinal
+## 3.3 Uso em áreas com pouco sinal
 
 Parte do público está em áreas rurais, onde nem sempre existe uma conexão boa com a internet.
 
 Por isso o mapa de focos deve ter opção de uso offline, permitindo consultar algumas informações mesmo com o celular sem sinal. Quando a conexão voltar, os dados são atualizados.
 
-## Uso em smartphones mais simples
+## 3.4 Uso em smartphones mais simples
 
 O aplicativo precisa funcionar em smartphones básicos.
 
 Como a proposta é atender diferentes públicos, não seria adequado criar uma solução que dependesse de aparelhos novos ou com grande capacidade de processamento.
 
-## Visibilidade e leitura
+## 3.5 Visibilidade e leitura
 
 Como o aplicativo é usado em áreas abertas e sob sol forte, os elementos da interface precisam ter bom contraste.
 
@@ -174,7 +174,7 @@ O uso do laranja, vermelho e preto ajuda a transmitir a ideia de alerta e facili
 
 No mapa de calor, o gradiente entre **laranja e vermelho** indica visualmente as regiões com maior atenção ou risco.
 
-## Alertas
+## 3.6 Alertas
 
 Os alertas importam porque o usuário quase nunca vai estar com o aplicativo aberto no momento em que o foco aparece.
 
@@ -191,7 +191,29 @@ Assim, uma pessoa é avisada sobre um foco próximo mesmo sem estar consultando 
 
 # 4. Objetivo e proposta de valor
 
-O QueimadaZero tem como objetivo ajudar as pessoas a saber quando existe alguma queimada por perto e avisar sobre possíveis riscos. O aplicativo também permite que o próprio usuário informe quando perceber fumaça ou algum foco de incêndio. Com isso, a ideia é facilitar o acesso às informações e ajudar as pessoas a se protegerem mais rápido quando acontecer alguma situação de risco.
+## 4.1 O que o aplicativo pretende oferecer
+
+O QueimadaZero pretende oferecer duas coisas ao usuário: uma visão rápida de onde estão os focos de queimada perto dele e um aviso quando algum deles representar risco para a sua região.
+
+Além disso, oferece um caminho simples para o próprio usuário informar o que está vendo. Quem percebe fumaça em uma área rural normalmente não tem a quem avisar de forma prática, e essa informação acaba se perdendo. No aplicativo, ela chega às outras pessoas da região.
+
+## 4.2 Qual benefício isso deve proporcionar
+
+O benefício central é **tempo**. Hoje o morador só descobre uma queimada quando a fumaça já chegou até ele, e nesse momento não há muito o que fazer além de suportar. A proposta é inverter isso: a pessoa é avisada antes, e não depois.
+
+Esse tempo tem usos diferentes conforme o público analisado no item 2:
+
+* Para quem tem doença respiratória crônica, é a diferença entre fechar as janelas antes da fumaça entrar ou passar o dia exposto a ela;
+* Para o morador de área rural, é poder acompanhar se o foco está se aproximando da sua propriedade;
+* Para brigadistas, bombeiros e agentes ambientais, é uma informação complementar sobre onde há relatos concentrados, que pode indicar uma região que precisa de atenção.
+
+## 4.3 O que diferencia a solução
+
+O aplicativo não pretende apenas exibir dados públicos de focos de incêndio, que já existem em outras fontes. O que ele agrega é a **informação de quem está no local**, no momento em que a queimada está acontecendo — algo que os dados por satélite não conseguem mostrar com a mesma rapidez.
+
+Em resumo: o valor do QueimadaZero não está em registrar a queimada, e sim em avisar a tempo quem pode ser afetado por ela.
+
+---
 
 # 5. Personalidade, identidade e experiência
 

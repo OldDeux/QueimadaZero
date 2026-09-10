@@ -213,3 +213,119 @@ As principais definições do aplicativo são alerta, proteção, prevenção, s
 
  Tudo isso vai influenciar na forma como as telas serão organizadas. Os alertas precisam ter destaque, os textos não podem ser muito grandes ou complicados e as funções principais devem ficar fáceis de encontrar.
 
+
+---
+
+# 6. Funcionalidades e características já definidas
+
+O estudo de caso já estabelece um conjunto de funcionalidades. Abaixo elas estão relacionadas à necessidade que atendem, considerando os públicos e os contextos analisados nos itens 2 e 3.
+
+## 6.1 Mapa de focos de queimada
+
+**Necessidade atendida:** permitir que o usuário descubra rapidamente se existe algum foco perto dele.
+
+É a função central do aplicativo e atende quase todos os públicos: o morador que sentiu fumaça, o brigadista que está em campo e o profissional que quer entender a situação de uma região.
+
+## 6.2 Mapa de calor com gradiente laranja e vermelho
+
+**Necessidade atendida:** entender o nível de risco de uma região sem precisar interpretar números ou ler texto.
+
+Como o uso acontece muitas vezes sob sol forte e em poucos segundos, a informação de intensidade precisa ser visual. A cor resolve isso mais rápido do que uma lista de focos.
+
+## 6.3 Notificação de fumaça enviada pelo usuário
+
+**Necessidade atendida:** dar um caminho para quem está presenciando a queimada avisar as outras pessoas.
+
+É o que transforma o aplicativo em algo colaborativo e não apenas um visualizador de dados públicos. Por isso o envio precisa ser curto — se exigir muitos passos, não será usado no momento em que importa.
+
+## 6.4 Acompanhamento do relato enviado
+
+**Necessidade atendida:** o usuário saber se o que ele informou foi considerado.
+
+Sem esse retorno, a tendência é a pessoa deixar de relatar nas próximas vezes, e o aplicativo perde justamente a informação que o diferencia.
+
+## 6.5 Alertas de proximidade (push, vibração e aviso sonoro)
+
+**Necessidade atendida:** avisar sobre um foco próximo mesmo quando o aplicativo está fechado.
+
+O usuário praticamente nunca vai estar com o mapa aberto no instante em que o foco aparece. Sem alerta ativo, a informação chega tarde. Para a pessoa com doença respiratória crônica, esse é o principal uso do aplicativo.
+
+## 6.6 Informações sobre qualidade do ar
+
+**Necessidade atendida:** avaliar a exposição à fumaça, e não apenas a localização do fogo.
+
+Atende principalmente o público mais vulnerável, para quem a fumaça é o risco real, mesmo que o foco esteja distante.
+
+## 6.7 Dicas e orientações de proteção
+
+**Necessidade atendida:** saber o que fazer depois de receber o alerta.
+
+O alerta sozinho informa, mas não orienta. As dicas fecham esse ciclo (fechar janelas, evitar atividade ao ar livre, proteção respiratória).
+
+## 6.8 Uso do mapa em modo offline
+
+**Necessidade atendida:** consultar informações em áreas rurais com sinal instável.
+
+Parte do público está exatamente onde a conexão é pior. Sem cache local, o aplicativo falharia no cenário mais crítico. Quando a conexão retorna, os dados são atualizados.
+
+## 6.9 Uso de dados públicos de focos de incêndio
+
+**Necessidade atendida:** ter conteúdo útil no mapa desde o primeiro acesso, independente do volume de relatos da região.
+
+Essa característica também sustenta o uso pelos bombeiros e agentes ambientais, já que em regiões com poucos usuários os relatos por si só não formariam um panorama confiável.
+
+---
+
+# 7. Restrições e condições
+
+As restrições abaixo vêm do próprio estudo de caso e delimitam o que pode ser proposto no projeto.
+
+## 7.1 Dispositivo
+
+O aplicativo precisa funcionar em **smartphones simples**, sem depender de aparelhos novos ou com grande capacidade de processamento. Isso restringe recursos pesados como animações elaboradas, mapas 3D ou processamento local intenso.
+
+## 7.2 Conectividade
+
+O uso em áreas rurais com **internet instável ou ausente** exige armazenamento local das informações do mapa e sincronização quando a conexão voltar. Nenhuma função essencial pode depender de resposta imediata do servidor.
+
+## 7.3 Navegação e número de interações
+
+As funções principais — consultar o mapa e informar fumaça — devem ser realizadas em **poucos passos e a partir da primeira tela**. Isso restringe o uso de menus profundos, abas escondidas e formulários longos no fluxo de relato.
+
+## 7.4 Ambiente de utilização
+
+Sol forte, fumaça, vento, ruído e pressa. Isso condiciona tamanho de fonte, área de toque, **alto contraste** e a possibilidade de uso com uma só mão.
+
+## 7.5 Identidade visual e leitura
+
+A paleta de **laranja, vermelho e preto** já está definida e serve à ideia de alerta. É uma restrição de projeto: as telas precisam ser construídas dentro dessa paleta, garantindo contraste suficiente para leitura em ambiente externo.
+
+## 7.6 Localização e privacidade
+
+Alertas de proximidade e relatos dependem da localização do usuário, que é um dado sensível. O uso deve ficar limitado à finalidade do alerta, com consentimento claro e sem exposição de quem enviou o relato.
+
+## 7.7 Armazenamento e tamanho do aplicativo
+
+Como o público usa aparelhos básicos, o aplicativo deve ser leve. O mapa offline precisa guardar apenas a área de interesse do usuário, e não grandes volumes de dados.
+
+## 7.8 Escopo em relação aos sistemas oficiais
+
+O aplicativo **não substitui** os sistemas dos bombeiros e dos órgãos ambientais. Ele é apoio e informação complementar — isso limita o que pode ser prometido ao usuário, especialmente quanto a acionamento de atendimento.
+
+---
+
+# 8. Pontos de atenção
+
+Considerando toda a análise, estes são os três aspectos mais importantes para o sucesso do QueimadaZero.
+
+## 8.1 O relato de fumaça precisa ser muito rápido
+
+É o que diferencia o aplicativo de um simples visualizador de dados públicos, mas também é a parte mais frágil. O relato acontece em situação de pressa, muitas vezes com uma mão, sob fumaça ou sol forte. Se o envio exigir cadastro, formulário longo ou vários toques, o usuário desiste e o aplicativo perde sua principal fonte de informação local.
+
+## 8.2 O alerta chegar antes de o usuário abrir o aplicativo
+
+O momento em que a informação vale mais é justamente quando ninguém está olhando a tela. Se o alerta de proximidade não for confiável, o aplicativo se torna algo que a pessoa consulta depois de já ter sentido a fumaça — o que reduz muito o valor preventivo, principalmente para quem tem doença respiratória crônica.
+
+## 8.3 Funcionar bem em aparelho simples e com sinal ruim
+
+O público que mais precisa do aplicativo está em área rural, com conexão instável e celular básico. Uma solução que só funcione bem com boa internet e aparelho recente atenderia justamente quem corre menos risco. Por isso o modo offline e o desempenho em aparelhos simples não são detalhes técnicos, são condição para o aplicativo cumprir o objetivo.

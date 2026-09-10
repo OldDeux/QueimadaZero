@@ -219,29 +219,22 @@ Em resumo: o valor do QueimadaZero não está em registrar a queimada, e sim em 
 
 As principais definições do aplicativo são alerta, proteção, prevenção, segurança e meio ambiente.
 
-## 5.1 Personalidade da identidade
+ # 5.1 Personalidade da identidade
 
-A ideia é que o aplicativo tenha uma identidade mais séria e protetora, já que ele trabalha com um assunto importante e que pode afetar a saúde e a segurança das pessoas.
+ A ideia é que o aplicativo tenha uma identidade mais séria e protetora, já que ele trabalha com um assunto importante e que pode afetar a saúde e a segurança das pessoas.
 
-## 5.2 Tom da interface
+ # 5.2 Tom da interface
 
-A interface precisa ser simples e direta, mostrando primeiro o que realmente importa. Por exemplo, quando existir uma queimada próxima, o aviso deve aparecer de forma bem clara e chamativa para o usuário perceber rápido.
+ A interface precisa ser simples e direta, mostrando primeiro o que realmente importa. Por exemplo, quando existir uma queimada próxima, o aviso deve aparecer de forma bem clara e chamativa para o usuário perceber rápido.
 
-## 5.3 Tom da experiência do usuário
+ # 5.3 Tom da experiência do usuário
 
-O uso do aplicativo deve ser fácil e rápido, porque em algumas situações a pessoa pode estar com pressa ou até em uma área com fumaça. Não é ideal ter muitos menus ou passos complicados.
+ O uso do aplicativo deve ser fácil e rápido, porque em algumas situações a pessoa pode estar com pressa ou até em uma área com fumaça. Não é ideal ter muitos menus ou passos complicados.
 
-## 5.4 Como o aplicativo deseja ser lembrado
+ # 5.4 Como isso influencia a solução
 
-O QueimadaZero deve ser lembrado como um aplicativo **confiável e que avisa a tempo**. A ideia é que a pessoa associe o aplicativo à sensação de ter sido avisada antes, e não à de ter descoberto o problema tarde demais.
+ Tudo isso vai influenciar na forma como as telas serão organizadas. Os alertas precisam ter destaque, os textos não podem ser muito grandes ou complicados e as funções principais devem ficar fáceis de encontrar.
 
-Isso tem uma consequência prática: o aplicativo não pode ser lembrado como algo que assusta sem motivo. Alerta em excesso ou alerta errado faz o usuário desativar as notificações, e aí ele deixa de ser avisado justamente quando importa. Ser lembrado como confiável depende de alertar quando existe risco real e de deixar claro de onde veio aquela informação — se é um foco de dado público ou um relato de outro usuário.
-
-Também é desejável que seja lembrado como um aplicativo **da comunidade**, e não apenas de consulta. Quem envia um relato e vê que aquilo ajudou alguém tende a continuar contribuindo, e é isso que mantém a informação atualizada.
-
-## 5.5 Como isso influencia a solução
-
-Tudo isso vai influenciar na forma como as telas serão organizadas. Os alertas precisam ter destaque, os textos não podem ser muito grandes ou complicados e as funções principais devem ficar fáceis de encontrar.
 
 ---
 
@@ -340,6 +333,24 @@ Como o público usa aparelhos básicos, o aplicativo deve ser leve. O mapa offli
 ## 7.8 Escopo em relação aos sistemas oficiais
 
 O aplicativo **não substitui** os sistemas dos bombeiros e dos órgãos ambientais. Ele é apoio e informação complementar — isso limita o que pode ser prometido ao usuário, especialmente quanto a acionamento de atendimento.
+
+## 7.9 Quantidade de telas e versão do sistema operacional
+
+O estudo de caso não fixa um número de telas nem uma versão mínima de sistema operacional. Ainda assim, essas duas condições ficam indiretamente delimitadas pelo que ele estabelece.
+
+Sobre a **quantidade de telas**, a exigência de resolver as funções principais a partir da primeira tela e em poucos passos (item 3 — Acesso às principais funções) já impede uma estrutura com muitos níveis. O grupo trabalhará com um conjunto enxuto de telas: mapa, detalhe do foco, envio de relato, acompanhamento dos relatos e orientações de proteção.
+
+Sobre a **versão do sistema operacional**, a restrição de atender smartphones simples (item 7.1) aponta para priorizar o Android e para adotar uma versão mínima antiga o suficiente para não excluir aparelhos em uso pelo público rural. Definir esse valor exato é uma decisão da próxima etapa do projeto, não desta análise.
+
+## 7.10 Acessibilidade
+
+O público inclui pessoas com condições de saúde que agravam o risco e usuários de perfis muito distintos, o que torna a acessibilidade uma condição do projeto e não um extra.
+
+* **Cor não pode ser o único código.** O mapa de calor usa o gradiente laranja e vermelho (item 6.2) para indicar intensidade. Para quem tem daltonismo, isso se perde — a intensidade precisa aparecer também em legenda, rótulo ou variação de forma;
+* **Texto ajustável.** O aplicativo deve respeitar o aumento de fonte do sistema sem quebrar o layout, já que parte do público é idosa;
+* **Área de toque generosa.** O uso com uma mão, em movimento e com pressa (item 3 — Ambiente de utilização) exige alvos de toque grandes, o que atende igualmente quem tem limitação motora;
+* **Alerta em mais de um canal.** A combinação de notificação visual, som e vibração (item 3 — Alertas) não deve ser apenas redundância: é o que permite que o alerta chegue a quem não ouve o aviso sonoro ou não pode olhar a tela naquele momento;
+* **Compatibilidade com leitor de tela.** Ícones e botões precisam de descrição textual, principalmente nos elementos do fluxo de relato.
 
 ---
 

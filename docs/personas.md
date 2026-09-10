@@ -35,7 +35,7 @@ As dicas respiratórias complementariam essa prevenção, oferecendo orientaçõ
 Como o aplicativo utiliza localização, também seria essencial oferecer transparência e controle, permitindo que Ana saiba quando esse recurso está ativo e possa desativá-lo sempre que desejar.
 
 
-# Persona 2 - 
+# Persona 2 
 
 **Nome fictício:** Joaquim Ferreira
 
@@ -51,7 +51,7 @@ Ele também precisa acessar informações mesmo em locais com pouca ou nenhuma i
 
 **Necessidades**: Joaquim precisa de uma interface com alto contraste, porque pode utilizar o celular sob luz forte do sol. Textos muito pequenos ou elementos com pouco contraste podem ficar praticamente invisíveis nesse tipo de ambiente. Ele também precisa que as ações principais estejam disponíveis logo na tela inicial. Se perceber fumaça, deve conseguir iniciar o registro da ocorrência com poucos toques.
 
-A localização automática é bastante importante, pois diminui a necessidade de digitar endereços ou procurar manualmente o ponto no mapa. O fluxo previsto no estudo de caso considera exatamente esse processo: selecionar a opção de notificar fumaça, tirar uma foto, confirmar a localização e enviar. João precisa ainda que o aplicativo funcione bem em aparelhos comuns e não dependa de um smartphone muito potente. A solução foi pensada para smartphones básicos e deve evitar recursos excessivamente pesados.
+A localização automática é bastante importante, pois diminui a necessidade de digitar endereços ou procurar manualmente o ponto no mapa. O fluxo previsto no estudo de caso considera exatamente esse processo: selecionar a opção de notificar fumaça, tirar uma foto, confirmar a localização e enviar. Joaquim precisa ainda que o aplicativo funcione bem em aparelhos comuns e não dependa de um smartphone muito potente. A solução foi pensada para smartphones básicos e deve evitar recursos excessivamente pesados.
 
 **Dores:** A principal dificuldade é trabalhar em locais onde a conexão pode desaparecer completamente. Um aplicativo que dependa de internet o tempo inteiro perderia boa parte da utilidade para ele. Assim como, utilizar o celular enquanto está em uma situação de atenção. Durante uma ocorrência, ele não pode parar para ler textos grandes ou preencher vários campos.
 

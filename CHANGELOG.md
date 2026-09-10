@@ -4,6 +4,28 @@ Registro das alterações realizadas no projeto **QueimadaZero**.
 
 O formato é baseado em [Keep a Changelog](https://keepachangelog.com/pt-BR/1.1.0/).
 
+## [0.2.0] - 2026-09-10
+
+Início da **Atividade 02 — Pesquisa, Benchmark e Personas**.
+
+### Adicionado
+
+- Criação do arquivo `docs/pesquisa.md` para reunir informações sobre o problema, necessidades dos usuários e dados relevantes para o desenvolvimento do aplicativo.
+- Criação do arquivo `docs/benchmark.md` para análise de soluções semelhantes ao QueimadaZero.
+- Análise do aplicativo **Watch Duty** como uma das referências do benchmark, considerando:
+  - Principais funcionalidades;
+  - Pontos positivos e negativos;
+  - Interface e experiência de uso;
+  - Ideias que podem ser aproveitadas ou melhoradas no QueimadaZero.
+- Estrutura inicial para o arquivo `docs/personas.md`, que será utilizado para organizar as personas do projeto.
+
+### Alterado
+
+- Atualização do `README.md` para manter as responsabilidades dos integrantes de acordo com a nova atividade.
+- Organização da documentação da Atividade 02 dentro da pasta `docs/`.
+
+---
+
 ## [0.1.0] - 2026-09-10
 
 Primeira versão da documentação do projeto, referente à **Atividade 01 — Análise do Estudo de Caso**.

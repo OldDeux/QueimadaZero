@@ -66,6 +66,38 @@ A persona prioritária é Ana Maria, que representa uma usuária que precisa rec
 **Justificativa:** O uso de dados públicos (ex: INPE) evita dependência exclusiva das notificações da comunidade.
 **Prioridade:** Essencial.
 
+## 3. Requisitos Funcionais
+
+*RF01 — Exibição do mapa:* O sistema deve permitir que o usuário visualize um mapa contendo os focos de queimadas registrados.
+
+*RF02 — Localização dos focos:* O sistema deve apresentar a localização aproximada dos focos de queimadas no mapa.
+
+*RF03 — Visualização do mapa de calor:* O sistema deve apresentar um mapa de calor utilizando indicação visual de diferentes níveis de atenção ou risco.
+
+*RF04 — Identificação da localização do usuário:* O sistema deve permitir utilizar a localização do dispositivo para identificar ocorrências próximas ao usuário, mediante autorização.
+
+*RF05 — Cadastro de notificação de fumaça:* O sistema deve permitir que o usuário registre uma notificação informando que está observando fumaça ou uma possível queimada.
+
+*RF06 — Registro da localização da ocorrência:* O sistema deve permitir associar a localização do dispositivo ao registro de uma notificação de fumaça, mediante autorização do usuário.
+
+*RF07 — Registro de imagem da ocorrência:* O sistema deve permitir que o usuário registre uma imagem da situação observada para complementar uma notificação de fumaça.
+
+*RF08 — Acompanhamento de notificações:* O sistema deve permitir que o usuário consulte os registros de notificações de fumaça realizados por ele.
+
+*RF09 — Envio de alertas de proximidade:* O sistema deve enviar uma notificação ao usuário quando uma ocorrência relevante estiver próxima de sua localização, conforme as configurações e permissões disponíveis.
+
+*RF10 — Exibição de informações sobre qualidade do ar:* O sistema deve permitir que o usuário consulte informações relacionadas à qualidade do ar e à exposição à fumaça.
+
+*RF11 — Exibição de orientações de proteção:* O sistema deve apresentar orientações de proteção para situações relacionadas à fumaça e às queimadas.
+
+*RF12 — Utilização de dados públicos:* O sistema deve permitir a utilização de dados públicos de focos de queimadas para complementar as ocorrências registradas pelos usuários.
+
+*RF13 — Armazenamento local de informações:* O sistema deve permitir armazenar localmente informações necessárias para a consulta do mapa quando o dispositivo estiver sem conexão.
+
+*RF14 — Atualização das informações:* O sistema deve atualizar as informações de focos e ocorrências quando houver conexão disponível.
+
+*RF15 — Identificação da atualização dos dados:* O sistema deve informar ao usuário a data e o horário da última atualização das informações apresentadas.
+
 ## 4. Requisitos Não Funcionais
 
 RNF01 — Usabilidade: O aplicativo deve permitir que as principais funcionalidades, especialmente a consulta do mapa e o registro de uma notificação de fumaça, sejam acessadas em poucos passos.

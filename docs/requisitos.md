@@ -66,6 +66,29 @@ A persona prioritária é Ana Maria, que representa uma usuária que precisa rec
 **Justificativa:** O uso de dados públicos (ex: INPE) evita dependência exclusiva das notificações da comunidade.
 **Prioridade:** Essencial.
 
+## 4. Requisitos Não Funcionais
+
+RNF01 — Usabilidade: O aplicativo deve permitir que as principais funcionalidades, especialmente a consulta do mapa e o registro de uma notificação de fumaça, sejam acessadas em poucos passos.
+
+RNF02 — Acessibilidade: O aplicativo deve utilizar textos legíveis, áreas de toque adequadas e elementos compatíveis com recursos de acessibilidade do sistema operacional.
+
+RNF03 — Contraste visual: A interface deve apresentar contraste suficiente para permitir a leitura das informações em ambientes externos e sob luz solar intensa.
+
+RNF04 — Segurança e privacidade (LGPD): O aplicativo deve solicitar autorização para utilização da localização e utilizar essa informação somente para as finalidades necessárias ao funcionamento das funcionalidades relacionadas à localização, em conformidade com a Lei Geral de Proteção de Dados (LGPD).
+
+RNF05 — Desempenho: O aplicativo deve apresentar as principais informações de forma rápida e evitar recursos excessivamente pesados que possam prejudicar seu funcionamento em smartphones básicos.
+
+RNF06 — Compatibilidade: O aplicativo deve ser desenvolvido prioritariamente para smartphones Android e considerar aparelhos com menor capacidade de processamento.
+
+RNF07 — Conectividade: As funcionalidades essenciais devem considerar situações de conexão instável, especialmente em áreas rurais.
+
+RNF08 — Funcionamento offline: O aplicativo deve permitir a consulta de informações previamente armazenadas quando não houver conexão disponível.
+
+RNF09 — Sincronização: Quando a conexão estiver disponível novamente, o aplicativo deve atualizar as informações armazenadas localmente.
+
+RNF10 — Legibilidade: O aplicativo deve permitir que o conteúdo permaneça legível quando o usuário utilizar tamanhos de fonte maiores disponibilizados pelo sistema operacional.
+
+
 ## 6. Priorização das funcionalidades
 
 ### Essenciais
@@ -87,3 +110,4 @@ Agregam valor, mas podem vir após o núcleo principal.
 
 ### Secundárias
 No escopo atual, não foram definidas funcionalidades secundárias específicas. Novas funcionalidades poderão ser identificadas nas próximas etapas.
+

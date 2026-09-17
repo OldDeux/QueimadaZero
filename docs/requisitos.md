@@ -143,3 +143,20 @@ Agregam valor, mas podem vir após o núcleo principal.
 ### Secundárias
 No escopo atual, não foram definidas funcionalidades secundárias específicas. Novas funcionalidades poderão ser identificadas nas próximas etapas.
 
+## 8. Funcionalidade mais importante
+
+A funcionalidade considerada mais importante é a **F05 — Alertas de proximidade**.
+
+O principal valor do QueimadaZero é informar o usuário sobre um risco antes de ele precisar procurar essa informação por conta própria. Para Ana Maria, o alerta pode representar tempo para tomar medidas preventivas, como fechar janelas, evitar atividades ao ar livre ou alterar seu trajeto. O aplicativo não deve apenas mostrar que uma queimada existe — deve ajudar o usuário a saber se existe risco perto dele, onde está o risco e o que pode fazer diante da situação.
+
+## 9. Relação com o problema e a pesquisa
+
+As funcionalidades e requisitos definidos estão relacionados ao problema identificado no estudo de caso: a dificuldade de obter rapidamente informações sobre focos de queimadas, fumaça e riscos para a população.
+
+A pesquisa mostrou a importância de transformar dados técnicos em informações compreensíveis para usuários comuns, além da necessidade de informações atualizadas e orientações de segurança.
+
+O benchmark demonstrou que soluções como Watch Duty, BDQueimadas e Painel do Fogo utilizam mapas e informações sobre ocorrências, mas o QueimadaZero busca combinar dados públicos com relatos dos próprios usuários e informações relacionadas à saúde e proteção contra a fumaça.
+
+## 10. Considerações finais
+
+A definição das funcionalidades e requisitos estabelece uma base para o desenvolvimento do QueimadaZero. O conjunto priorizado concentra-se inicialmente em três necessidades principais: identificar riscos próximos, comunicar novas ocorrências e orientar o usuário diante da fumaça. A partir desses requisitos, as próximas etapas do projeto poderão utilizar as funcionalidades essenciais como base para o desenvolvimento das telas, fluxos de navegação e implementação técnica do aplicativo.

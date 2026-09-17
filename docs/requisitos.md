@@ -259,6 +259,29 @@ O aplicativo deve apresentar textos e informações de forma legível, inclusive
 
 ---
 
+## 5. CRUD
+
+Para representar o CRUD do sistema, será utilizado como exemplo o **registro de ocorrência de fumaça**.
+
+| Operação | Aplicação no QueimadaZero |
+|---|---|
+| **Create** | O usuário cria um novo registro de ocorrência de fumaça. |
+| **Read** | O usuário consulta os registros de ocorrências realizados por ele. |
+| **Update** | Não é considerado essencial no fluxo inicial do sistema. |
+| **Delete** | O usuário poderá excluir um registro próprio quando essa operação estiver prevista pelas regras do sistema. |
+
+### Justificativa do Update
+
+A alteração não é considerada essencial para o fluxo inicial porque o registro representa uma situação observada pelo usuário em determinado momento. Alterações posteriores podem modificar as informações originalmente registradas.
+
+Caso seja identificada a necessidade de corrigir informações, essa operação poderá ser adicionada em uma etapa futura do projeto.
+
+### Justificativa do Delete
+
+A exclusão pode ser disponibilizada para permitir que o usuário remova um registro próprio quando necessário, respeitando as regras de funcionamento e privacidade definidas para o aplicativo.
+
+---
+
 ## 6. Priorização das Funcionalidades
 
 ### Essenciais
@@ -283,6 +306,36 @@ Essas funcionalidades complementam as funções principais e aumentam a utilidad
 ### Secundárias
 
 No escopo atual, não foram definidas funcionalidades secundárias específicas. Novas funcionalidades poderão ser identificadas nas próximas etapas do projeto.
+
+---
+
+## 7. Relação com as Personas
+
+### Ana Maria
+
+As funcionalidades que possuem maior relação com a persona Ana Maria são:
+
+- F01 — Mapa de focos de queimada;
+- F02 — Mapa de calor e indicação visual de risco;
+- F05 — Alertas de proximidade;
+- F06 — Informações sobre qualidade do ar;
+- F07 — Dicas e orientações de proteção;
+- F03 — Registro de ocorrência de fumaça.
+
+Esses recursos permitem que a usuária tenha acesso a informações sobre queimadas próximas, compreenda melhor a situação e consulte orientações relacionadas à fumaça.
+
+### Joaquim Ferreira
+
+As funcionalidades relacionadas ao perfil de Joaquim incluem:
+
+- F01 — Mapa de focos de queimada;
+- F02 — Mapa de calor e indicação visual de risco;
+- F03 — Registro de ocorrência de fumaça;
+- F04 — Consulta de relatos realizados;
+- F08 — Consulta de informações previamente armazenadas;
+- F09 — Utilização de dados públicos de queimadas.
+
+Esses recursos estão relacionados à necessidade de acompanhar e registrar ocorrências, inclusive em situações de campo e em locais com conexão instável.
 
 ---
 

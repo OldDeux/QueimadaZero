@@ -10,153 +10,310 @@ A definição das funcionalidades e requisitos foi baseada no estudo de caso, na
 
 A persona prioritária é Ana Maria, que representa uma usuária que precisa receber informações rápidas sobre queimadas próximas, compreender o risco da fumaça e saber quais medidas de proteção pode tomar. Joaquim Ferreira representa o uso do aplicativo por um brigadista voluntário, principalmente em situações de campo e em regiões com conexão instável.
 
+---
+
 ## 2. Funcionalidades
 
 ### F01 — Mapa de focos de queimada
-**Descrição:** O aplicativo deverá apresentar um mapa com os focos de queimadas identificados, permitindo que o usuário visualize a localização aproximada das ocorrências.
-**Necessidade do usuário atendida:** Permitir que moradores, brigadistas, bombeiros e agentes ambientais identifiquem rapidamente onde existem focos de queimadas.
-**Justificativa:** O mapa é uma das principais formas de transformar dados técnicos de localização em uma informação visual e fácil de compreender.
+
+**Descrição:**  
+O aplicativo deverá permitir que o usuário acesse um mapa contendo os focos de queimadas identificados e visualize a localização aproximada das ocorrências.
+
+**Necessidade do usuário atendida:**  
+Permitir que moradores, brigadistas, bombeiros e agentes ambientais identifiquem rapidamente onde existem focos de queimadas.
+
+**Justificativa:**  
+O mapa transforma dados de localização em uma informação visual e facilita a identificação das ocorrências.
+
 **Prioridade:** Essencial.
+
+---
 
 ### F02 — Mapa de calor e indicação visual de risco
-**Descrição:** O aplicativo deverá apresentar uma representação visual das regiões de maior atenção utilizando um mapa de calor, com gradiente entre laranja e vermelho.
-**Necessidade do usuário atendida:** Permitir que o usuário compreenda rapidamente quais regiões apresentam maior concentração ou atenção relacionada às queimadas.
-**Justificativa:** Facilita a compreensão da situação em ambientes externos, sob sol forte, sem depender de textos ou números.
+
+**Descrição:**  
+O aplicativo deverá apresentar uma representação visual das regiões de maior concentração ou atenção relacionada às queimadas por meio de um mapa de calor.
+
+**Necessidade do usuário atendida:**  
+Permitir que o usuário compreenda rapidamente quais regiões apresentam maior concentração ou atenção relacionada às queimadas.
+
+**Justificativa:**  
+A representação visual facilita a interpretação das informações apresentadas pelo aplicativo.
+
 **Prioridade:** Essencial.
 
-### F03 — Notificação de fumaça pelo usuário
-**Descrição:** O aplicativo deverá permitir que o usuário informe uma situação de fumaça ou possível queimada observada em sua região.
-**Necessidade do usuário atendida:** Permitir que moradores e brigadistas contribuam com informações sobre ocorrências ainda não identificadas.
-**Justificativa:** É um dos principais diferenciais do QueimadaZero em relação a plataformas que apenas apresentam dados públicos.
+---
+
+### F03 — Registro de ocorrência de fumaça
+
+**Descrição:**  
+O aplicativo deverá permitir que o usuário registre uma situação de fumaça ou possível queimada observada em sua região.
+
+**Necessidade do usuário atendida:**  
+Permitir que moradores e brigadistas contribuam com informações sobre ocorrências observadas.
+
+**Justificativa:**  
+O registro realizado pelos usuários complementa os dados públicos e permite a comunicação de situações observadas diretamente pela população.
+
 **Prioridade:** Essencial.
 
-### F04 — Acompanhamento do relato enviado
-**Descrição:** O aplicativo deverá permitir que o usuário acompanhe o registro de uma notificação de fumaça enviada anteriormente.
-**Necessidade do usuário atendida:** Permitir que o usuário saiba se sua informação foi registrada e considerada pelo sistema.
-**Justificativa:** Dar retorno ao usuário aumenta a confiança no sistema e incentiva novas contribuições.
+---
+
+### F04 — Consulta de relatos realizados
+
+**Descrição:**  
+O aplicativo deverá permitir que o usuário consulte os registros de ocorrências de fumaça realizados anteriormente por ele.
+
+**Necessidade do usuário atendida:**  
+Permitir que o usuário acompanhe os relatos realizados.
+
+**Justificativa:**  
+A consulta dos registros permite que o usuário tenha acesso ao histórico de suas contribuições no aplicativo.
+
 **Prioridade:** Importante.
+
+---
 
 ### F05 — Alertas de proximidade
-**Descrição:** O aplicativo deverá enviar alertas quando uma ocorrência de queimada estiver próxima da localização do usuário.
-**Necessidade do usuário atendida:** Avisar o usuário sobre uma situação de risco mesmo quando ele não estiver com o aplicativo aberto.
-**Justificativa:** Permite que o usuário seja informado antes ou durante a chegada da fumaça à sua região, dando tempo para medidas preventivas.
+
+**Descrição:**  
+O aplicativo deverá enviar alertas quando uma ocorrência de queimada estiver próxima da localização do usuário, considerando as permissões e configurações disponíveis.
+
+**Necessidade do usuário atendida:**  
+Avisar o usuário sobre uma situação de risco próxima sem que ele precise procurar manualmente essa informação no aplicativo.
+
+**Justificativa:**  
+O alerta permite que o usuário tenha acesso rápido a informações sobre possíveis situações de risco em sua região.
+
 **Prioridade:** Essencial.
+
+---
 
 ### F06 — Informações sobre qualidade do ar
-**Descrição:** O aplicativo deverá apresentar informações relacionadas à qualidade do ar e à possível exposição à fumaça.
-**Necessidade do usuário atendida:** Permitir que o usuário compreenda melhor o impacto da fumaça, não apenas a localização do foco.
-**Justificativa:** A fumaça pode afetar pessoas mesmo distantes do foco, especialmente as mais vulneráveis.
+
+**Descrição:**  
+O aplicativo deverá apresentar informações relacionadas à qualidade do ar e à exposição à fumaça.
+
+**Necessidade do usuário atendida:**  
+Permitir que o usuário compreenda melhor as condições do ar durante situações relacionadas às queimadas.
+
+**Justificativa:**  
+As informações sobre qualidade do ar complementam os dados sobre a localização das queimadas e ajudam o usuário a compreender os possíveis impactos da fumaça.
+
 **Prioridade:** Importante.
+
+---
 
 ### F07 — Dicas e orientações de proteção
-**Descrição:** O aplicativo deverá disponibilizar orientações sobre medidas que podem ser tomadas durante situações de fumaça ou risco de queimada.
-**Necessidade do usuário atendida:** Orientar o usuário sobre como reduzir sua exposição à fumaça.
-**Justificativa:** O alerta sozinho informa o risco, mas não explica o que fazer; as orientações transformam a informação em ação preventiva.
+
+**Descrição:**  
+O aplicativo deverá disponibilizar orientações sobre medidas de proteção que podem ser adotadas durante situações de fumaça ou risco de queimada.
+
+**Necessidade do usuário atendida:**  
+Orientar o usuário sobre cuidados que podem ser adotados diante de situações de fumaça ou queimadas.
+
+**Justificativa:**  
+Além de informar sobre a existência de uma ocorrência, o aplicativo deve disponibilizar orientações que ajudem o usuário a agir diante da situação.
+
 **Prioridade:** Importante.
 
-### F08 — Modo offline do mapa
-**Descrição:** O aplicativo deverá permitir a consulta de informações previamente armazenadas no mapa mesmo sem conexão com a internet.
-**Necessidade do usuário atendida:** Permitir que usuários em áreas rurais ou com internet instável continuem consultando informações disponíveis.
-**Justificativa:** O estudo de caso estabelece que o aplicativo deve funcionar em situações de conectividade limitada.
+---
+
+### F08 — Consulta de informações previamente armazenadas
+
+**Descrição:**  
+O aplicativo deverá permitir a consulta de informações previamente armazenadas no dispositivo quando não houver conexão com a internet.
+
+**Necessidade do usuário atendida:**  
+Permitir que usuários em áreas rurais ou com conexão instável continuem consultando informações que já tenham sido carregadas anteriormente.
+
+**Justificativa:**  
+O estudo de caso considera situações de conectividade limitada. A consulta de informações previamente armazenadas permite que parte do conteúdo continue acessível mesmo durante uma indisponibilidade temporária da conexão.
+
 **Prioridade:** Importante.
+
+---
 
 ### F09 — Utilização de dados públicos de queimadas
-**Descrição:** O aplicativo deverá utilizar dados públicos de focos de queimadas para alimentar as informações apresentadas no mapa.
-**Necessidade do usuário atendida:** Garantir que o aplicativo tenha informações mesmo em regiões com poucos usuários relatando.
-**Justificativa:** O uso de dados públicos (ex: INPE) evita dependência exclusiva das notificações da comunidade.
+
+**Descrição:**  
+O aplicativo deverá utilizar dados públicos de focos de queimadas para complementar as informações apresentadas no mapa.
+
+**Necessidade do usuário atendida:**  
+Permitir o acesso a informações sobre ocorrências mesmo em regiões com poucos relatos realizados pelos usuários.
+
+**Justificativa:**  
+A utilização de dados públicos complementa os relatos da comunidade e amplia a quantidade de informações disponíveis no aplicativo.
+
 **Prioridade:** Essencial.
+
+---
 
 ## 3. Requisitos Funcionais
 
-*RF01 — Exibição do mapa:* O sistema deve permitir que o usuário visualize um mapa contendo os focos de queimadas registrados.
+Os requisitos funcionais representam as ações e comportamentos que o sistema deverá oferecer ao usuário ou executar para disponibilizar as funcionalidades definidas para o QueimadaZero.
 
-*RF02 — Localização dos focos:* O sistema deve apresentar a localização aproximada dos focos de queimadas no mapa.
+### RF01 — Acessar o mapa
 
-*RF03 — Visualização do mapa de calor:* O sistema deve apresentar um mapa de calor utilizando indicação visual de diferentes níveis de atenção ou risco.
+O sistema deve permitir que o usuário acesse a tela do mapa de queimadas.
 
-*RF04 — Identificação da localização do usuário:* O sistema deve permitir utilizar a localização do dispositivo para identificar ocorrências próximas ao usuário, mediante autorização.
+### RF02 — Visualizar focos de queimadas
 
-*RF05 — Cadastro de notificação de fumaça:* O sistema deve permitir que o usuário registre uma notificação informando que está observando fumaça ou uma possível queimada.
+O sistema deve apresentar os focos de queimadas disponíveis no mapa, indicando sua localização aproximada.
 
-*RF06 — Registro da localização da ocorrência:* O sistema deve permitir associar a localização do dispositivo ao registro de uma notificação de fumaça, mediante autorização do usuário.
+### RF03 — Consultar informações de um foco
 
-*RF07 — Registro de imagem da ocorrência:* O sistema deve permitir que o usuário registre uma imagem da situação observada para complementar uma notificação de fumaça.
+O sistema deve permitir que o usuário selecione um foco apresentado no mapa e consulte as informações disponíveis sobre a ocorrência.
 
-*RF08 — Acompanhamento de notificações:* O sistema deve permitir que o usuário consulte os registros de notificações de fumaça realizados por ele.
+### RF04 — Visualizar mapa de calor
 
-*RF09 — Envio de alertas de proximidade:* O sistema deve enviar uma notificação ao usuário quando uma ocorrência relevante estiver próxima de sua localização, conforme as configurações e permissões disponíveis.
+O sistema deve permitir que o usuário visualize o mapa de calor com a indicação visual das regiões de maior concentração ou atenção relacionada às queimadas.
 
-*RF10 — Exibição de informações sobre qualidade do ar:* O sistema deve permitir que o usuário consulte informações relacionadas à qualidade do ar e à exposição à fumaça.
+### RF05 — Visualizar localização do usuário
 
-*RF11 — Exibição de orientações de proteção:* O sistema deve apresentar orientações de proteção para situações relacionadas à fumaça e às queimadas.
+O sistema deve permitir que o usuário visualize sua localização no mapa, mediante autorização para utilização da localização do dispositivo.
 
-*RF12 — Utilização de dados públicos:* O sistema deve permitir a utilização de dados públicos de focos de queimadas para complementar as ocorrências registradas pelos usuários.
+### RF06 — Registrar ocorrência de fumaça
 
-*RF13 — Armazenamento local de informações:* O sistema deve permitir armazenar localmente informações necessárias para a consulta do mapa quando o dispositivo estiver sem conexão.
+O sistema deve permitir que o usuário registre uma ocorrência de fumaça ou possível queimada.
 
-*RF14 — Atualização das informações:* O sistema deve atualizar as informações de focos e ocorrências quando houver conexão disponível.
+### RF07 — Informar localização da ocorrência
 
-*RF15 — Identificação da atualização dos dados:* O sistema deve informar ao usuário a data e o horário da última atualização das informações apresentadas.
+O sistema deve permitir que o usuário informe a localização da ocorrência ou utilize a localização do dispositivo para associá-la ao registro, mediante autorização.
+
+### RF08 — Adicionar imagem à ocorrência
+
+O sistema deve permitir que o usuário adicione uma imagem ao registro da ocorrência, quando disponível.
+
+### RF09 — Consultar relatos realizados
+
+O sistema deve permitir que o usuário consulte os registros de ocorrências realizados anteriormente por ele.
+
+### RF10 — Receber alerta de proximidade
+
+O sistema deve enviar uma notificação ao usuário quando uma ocorrência relevante estiver próxima de sua localização, considerando as permissões e configurações disponíveis.
+
+### RF11 — Consultar informações sobre qualidade do ar
+
+O sistema deve permitir que o usuário consulte informações disponíveis relacionadas à qualidade do ar e à exposição à fumaça.
+
+### RF12 — Consultar orientações de proteção
+
+O sistema deve permitir que o usuário acesse orientações de proteção relacionadas a situações de fumaça e queimadas.
+
+### RF13 — Utilizar dados públicos
+
+O sistema deve utilizar dados públicos de focos de queimadas para complementar as informações apresentadas pelo aplicativo.
+
+### RF14 — Consultar informações armazenadas
+
+O sistema deve permitir que o usuário consulte informações previamente armazenadas no dispositivo quando não houver conexão disponível.
+
+### RF15 — Atualizar informações
+
+O sistema deve atualizar as informações de focos e ocorrências quando houver conexão disponível.
+
+---
 
 ## 4. Requisitos Não Funcionais
 
-RNF01 — Usabilidade: O aplicativo deve permitir que as principais funcionalidades, especialmente a consulta do mapa e o registro de uma notificação de fumaça, sejam acessadas em poucos passos.
+### RNF01 — Usabilidade
 
-RNF02 — Acessibilidade: O aplicativo deve utilizar textos legíveis, áreas de toque adequadas e elementos compatíveis com recursos de acessibilidade do sistema operacional.
+O aplicativo deve permitir que as principais funcionalidades, especialmente a consulta do mapa e o registro de uma ocorrência, sejam acessadas em poucos passos.
 
-RNF03 — Contraste visual: A interface deve apresentar contraste suficiente para permitir a leitura das informações em ambientes externos e sob luz solar intensa.
+### RNF02 — Acessibilidade
 
-RNF04 — Segurança e privacidade (LGPD): O aplicativo deve solicitar autorização para utilização da localização e utilizar essa informação somente para as finalidades necessárias ao funcionamento das funcionalidades relacionadas à localização, em conformidade com a Lei Geral de Proteção de Dados (LGPD).
+O aplicativo deve utilizar textos legíveis, áreas de toque adequadas e elementos compatíveis com os recursos de acessibilidade disponíveis no sistema operacional.
 
-RNF05 — Desempenho: O aplicativo deve apresentar as principais informações de forma rápida e evitar recursos excessivamente pesados que possam prejudicar seu funcionamento em smartphones básicos.
+### RNF03 — Contraste visual
 
-RNF06 — Compatibilidade: O aplicativo deve ser desenvolvido prioritariamente para smartphones Android e considerar aparelhos com menor capacidade de processamento.
+A interface deve apresentar contraste suficiente para facilitar a leitura das informações apresentadas pelo aplicativo, inclusive em ambientes externos.
 
-RNF07 — Conectividade: As funcionalidades essenciais devem considerar situações de conexão instável, especialmente em áreas rurais.
+### RNF04 — Segurança e privacidade (LGPD)
 
-RNF08 — Funcionamento offline: O aplicativo deve permitir a consulta de informações previamente armazenadas quando não houver conexão disponível.
+O aplicativo deve solicitar autorização para utilização da localização e utilizar essa informação somente para as finalidades necessárias ao funcionamento das funcionalidades relacionadas à localização, respeitando os princípios da Lei Geral de Proteção de Dados (LGPD).
 
-RNF09 — Sincronização: Quando a conexão estiver disponível novamente, o aplicativo deve atualizar as informações armazenadas localmente.
+### RNF05 — Desempenho
 
-RNF10 — Legibilidade: O aplicativo deve permitir que o conteúdo permaneça legível quando o usuário utilizar tamanhos de fonte maiores disponibilizados pelo sistema operacional.
+O aplicativo deve apresentar as principais informações em tempo adequado e evitar recursos excessivamente pesados que possam prejudicar seu funcionamento em smartphones com menor capacidade de processamento.
 
+### RNF06 — Compatibilidade
 
-## 6. Priorização das funcionalidades
+O aplicativo deve ser desenvolvido prioritariamente para smartphones Android e considerar dispositivos com diferentes capacidades de processamento.
+
+### RNF07 — Conectividade
+
+O aplicativo deve considerar situações de conexão instável ou inexistente, especialmente em regiões onde o acesso à internet possa ser limitado.
+
+### RNF08 — Funcionamento offline
+
+O aplicativo deve permitir a consulta de informações previamente armazenadas quando não houver conexão disponível.
+
+### RNF09 — Sincronização
+
+Quando a conexão estiver disponível novamente, o aplicativo deve atualizar as informações armazenadas localmente.
+
+### RNF10 — Legibilidade
+
+O aplicativo deve apresentar textos e informações de forma legível, inclusive quando o usuário utilizar tamanhos de fonte maiores disponibilizados pelo sistema operacional.
+
+---
+
+## 6. Priorização das Funcionalidades
 
 ### Essenciais
-- F01 — Mapa de focos de queimada
-- F02 — Mapa de calor e indicação visual de risco
-- F03 — Notificação de fumaça pelo usuário
-- F05 — Alertas de proximidade
-- F09 — Utilização de dados públicos de queimadas
 
-Indispensáveis porque representam a proposta principal: mostrar onde existem queimadas, alertar quem pode ser afetado e permitir que a população contribua com informações.
+- **F01 — Mapa de focos de queimada**
+- **F02 — Mapa de calor e indicação visual de risco**
+- **F03 — Registro de ocorrência de fumaça**
+- **F05 — Alertas de proximidade**
+- **F09 — Utilização de dados públicos de queimadas**
+
+Essas funcionalidades estão diretamente relacionadas à proposta principal do QueimadaZero: apresentar informações sobre queimadas, identificar situações de risco, alertar usuários e permitir a contribuição da população.
 
 ### Importantes
-- F04 — Acompanhamento do relato enviado
-- F06 — Informações sobre qualidade do ar
-- F07 — Dicas e orientações de proteção
-- F08 — Modo offline do mapa
 
-Agregam valor, mas podem vir após o núcleo principal.
+- **F04 — Consulta de relatos realizados**
+- **F06 — Informações sobre qualidade do ar**
+- **F07 — Dicas e orientações de proteção**
+- **F08 — Consulta de informações previamente armazenadas**
+
+Essas funcionalidades complementam as funções principais e aumentam a utilidade do aplicativo para os usuários.
 
 ### Secundárias
-No escopo atual, não foram definidas funcionalidades secundárias específicas. Novas funcionalidades poderão ser identificadas nas próximas etapas.
 
-## 8. Funcionalidade mais importante
+No escopo atual, não foram definidas funcionalidades secundárias específicas. Novas funcionalidades poderão ser identificadas nas próximas etapas do projeto.
+
+---
+
+## 8. Funcionalidade Mais Importante
 
 A funcionalidade considerada mais importante é a **F05 — Alertas de proximidade**.
 
-O principal valor do QueimadaZero é informar o usuário sobre um risco antes de ele precisar procurar essa informação por conta própria. Para Ana Maria, o alerta pode representar tempo para tomar medidas preventivas, como fechar janelas, evitar atividades ao ar livre ou alterar seu trajeto. O aplicativo não deve apenas mostrar que uma queimada existe — deve ajudar o usuário a saber se existe risco perto dele, onde está o risco e o que pode fazer diante da situação.
+O principal motivo é que o alerta permite que o usuário seja informado sobre uma ocorrência de risco próxima sem precisar procurar manualmente essa informação no aplicativo.
 
-## 9. Relação com o problema e a pesquisa
+Dessa forma, o QueimadaZero não apenas apresenta informações sobre queimadas, mas também pode comunicar uma situação relevante ao usuário de forma mais direta, permitindo que ele tenha conhecimento do risco e possa tomar medidas preventivas.
 
-As funcionalidades e requisitos definidos estão relacionados ao problema identificado no estudo de caso: a dificuldade de obter rapidamente informações sobre focos de queimadas, fumaça e riscos para a população.
+---
 
-A pesquisa mostrou a importância de transformar dados técnicos em informações compreensíveis para usuários comuns, além da necessidade de informações atualizadas e orientações de segurança.
+## 9. Relação com o Problema e a Pesquisa
 
-O benchmark demonstrou que soluções como Watch Duty, BDQueimadas e Painel do Fogo utilizam mapas e informações sobre ocorrências, mas o QueimadaZero busca combinar dados públicos com relatos dos próprios usuários e informações relacionadas à saúde e proteção contra a fumaça.
+As funcionalidades e requisitos definidos estão relacionados ao problema identificado no estudo de caso: a dificuldade de obter rapidamente informações sobre focos de queimadas, fumaça e possíveis riscos para a população.
 
-## 10. Considerações finais
+A pesquisa realizada anteriormente mostrou a necessidade de transformar informações sobre queimadas em conteúdos mais compreensíveis para os usuários, além de disponibilizar informações atualizadas e orientações relacionadas à proteção.
 
-A definição das funcionalidades e requisitos estabelece uma base para o desenvolvimento do QueimadaZero. O conjunto priorizado concentra-se inicialmente em três necessidades principais: identificar riscos próximos, comunicar novas ocorrências e orientar o usuário diante da fumaça. A partir desses requisitos, as próximas etapas do projeto poderão utilizar as funcionalidades essenciais como base para o desenvolvimento das telas, fluxos de navegação e implementação técnica do aplicativo.
+O benchmark demonstrou a utilização de mapas e informações sobre ocorrências em soluções relacionadas ao monitoramento de queimadas. O QueimadaZero busca combinar dados públicos com relatos realizados pelos próprios usuários e informações relacionadas à proteção contra a fumaça.
+
+Dessa forma, as funcionalidades propostas procuram atender às necessidades identificadas nas pesquisas e nas personas, mantendo o foco em identificar ocorrências, informar sobre riscos, permitir a participação dos usuários e fornecer orientações.
+
+---
+
+## 10. Considerações Finais
+
+A definição das funcionalidades e requisitos estabelece uma base para o desenvolvimento do QueimadaZero.
+
+O conjunto priorizado concentra-se principalmente em quatro necessidades: visualizar onde existem queimadas, identificar situações de maior atenção, receber informações sobre riscos próximos e permitir que a população registre ocorrências observadas.
+
+Os requisitos funcionais descrevem as ações que o sistema deverá disponibilizar para atender a essas necessidades, enquanto os requisitos não funcionais definem características relacionadas à usabilidade, acessibilidade, segurança, desempenho, compatibilidade e conectividade.
+
+A partir desses requisitos, as próximas etapas do projeto poderão utilizar as funcionalidades essenciais como base para o desenvolvimento das telas, fluxos de navegação e implementação técnica do aplicativo.

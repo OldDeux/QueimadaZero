@@ -4,6 +4,25 @@ Registro das alterações realizadas no projeto **QueimadaZero**.
 
 O formato é baseado em [Keep a Changelog](https://keepachangelog.com/pt-BR/1.1.0/).
 
+## [0.4.0] - 2026-09-30
+
+Início da **Atividade 04 — Prototipação**.
+
+### Adicionado
+
+* Criação do protótipo de baixa fidelidade em `docs/prototipoBaixaFidelidade.pdf`.
+* Criação do protótipo de alta fidelidade em `docs/prototipoAltaFidelidade.pdf`.
+* Criação do arquivo `docs/justificativas.md` com as justificativas das decisões de UI/UX.
+* Definição dos fluxos principais de navegação entre as telas.
+* Representação das principais funcionalidades e requisitos do QueimadaZero nos protótipos.
+* Aplicação da identidade visual, cores, tipografia, componentes e elementos visuais no protótipo de alta fidelidade.
+
+### Alterado
+
+* Atualização do `README.md` com as responsabilidades dos integrantes referentes à Atividade 04.
+
+---
+
 ## [0.3.0] - 2026-09-15
 
 Início da **Atividade 03 — Funcionalidades e Requisitos**.

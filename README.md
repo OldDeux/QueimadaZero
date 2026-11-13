@@ -87,6 +87,7 @@ Os principais arquivos de documentação são:
 * `docs/prototipoBaixaFidelidade.pdf` — protótipo de baixa fidelidade;
 * `docs/prototipoAltaFidelidade.pdf` — protótipo de alta fidelidade;
 * `docs/justificativas.md` — justificativas das decisões de UI/UX;
+* `docs/arquitetura.md` — Clean Architecture do app e como criar uma funcionalidade;
 * `CHANGELOG.md` — registro das alterações feitas no projeto.
 
 O código do aplicativo fica em `app/`, e o ambiente para rodá-lo está em `Dockerfile` e `docker-compose.yml` (veja [Ambiente de desenvolvimento](#ambiente-de-desenvolvimento)).

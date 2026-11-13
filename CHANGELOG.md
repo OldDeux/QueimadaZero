@@ -4,6 +4,23 @@ Registro das alterações realizadas no projeto **QueimadaZero**.
 
 O formato é baseado em [Keep a Changelog](https://keepachangelog.com/pt-BR/1.1.0/).
 
+## [0.6.0] - 2026-11-13
+
+Ambiente de desenvolvimento com Docker (#34).
+
+### Adicionado
+
+* `Dockerfile` com o Flutter 3.47.9 (Dart 3.13.7), a mesma versão usada para criar o projeto em `app/`, com download conferido por checksum.
+* `docker-compose.yml` com o serviço `flutter`, que compartilha a pasta `app/` com o container e guarda os pacotes no volume `pub-cache`.
+* Seção **Ambiente de desenvolvimento** no `README.md`, com os comandos de `pub get`, `analyze` e `test` pelo container.
+
+### Observações
+
+* A imagem `cirruslabs/flutter` foi descartada porque ainda não publica o Flutter 3.47, exigido pelo `pubspec.yaml` do projeto.
+* O container não roda emulador; o APK e a versão web ficam para a issue #35.
+
+---
+
 ## [0.5.0] - 2026-11-13
 
 Início da **Unidade II — Planejamento do desenvolvimento do aplicativo**.

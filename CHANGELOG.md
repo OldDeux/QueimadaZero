@@ -20,7 +20,8 @@ Início da **Unidade II — Planejamento do desenvolvimento do aplicativo**.
 
 * Cada PR deve citar a issue com `Closes #N` na descrição, para fechar a issue e mover o card para **Concluído** no merge.
 * A movimentação para **Em desenvolvimento** e **Em review** é feita manualmente no quadro.
-* Issues novas devem ser adicionadas ao Project pela lateral da issue, pois o Project não fica vinculado ao repositório.
+* Issues e PRs novos não aparecem para seleção na lateral, pois o Project pertence à conta `marcos-grocha` e não pode ser vinculado ao repositório do `OldDeux`. Eles devem ser adicionados pelo próprio Project, em **+ Add item** colando o link, ou pela linha de comando: `gh project item-add 4 --owner marcos-grocha --url <link>`.
+* Ao abrir um PR, adicioná-lo ao Project e movê-lo para **Em review**.
 
 ---
 

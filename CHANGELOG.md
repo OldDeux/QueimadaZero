@@ -4,6 +4,26 @@ Registro das alterações realizadas no projeto **QueimadaZero**.
 
 O formato é baseado em [Keep a Changelog](https://keepachangelog.com/pt-BR/1.1.0/).
 
+## [0.7.0] - 2026-11-13
+
+Estrutura do app com Clean Architecture (#6).
+
+### Adicionado
+
+* Estrutura de pastas por feature (`alertas`, `denuncia`, `dicas`, `focos`, `qualidade_ar`), cada uma com as camadas `domain`, `data` e `presentation`.
+* `core/` com as falhas (`Failure`), as exceções da camada de dados (`AppException`), o tipo `Result` e o contrato `UseCase`.
+* Feature `dicas` completa como exemplo de ponta a ponta: entidade, contrato, caso de uso, fonte local, modelo, repositório e tela.
+* `injection.dart` como ponto único de ligação das camadas, com injeção manual até a decisão da issue #7.
+* 6 testes automatizados: caso de uso, repositório (incluindo a conversão de erro em falha), modelo e abertura do app.
+* `docs/arquitetura.md` com as regras das camadas e o passo a passo para criar uma funcionalidade.
+
+### Alterado
+
+* Nome do pacote de `app` para `queimada_zero`.
+* Remoção do app de exemplo (contador) gerado pelo Flutter. A tela inicial provisória passa a ser a de dicas.
+
+---
+
 ## [0.6.0] - 2026-11-13
 
 Ambiente de desenvolvimento com Docker (#34).

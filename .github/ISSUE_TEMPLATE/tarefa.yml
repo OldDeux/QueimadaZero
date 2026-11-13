@@ -1,0 +1,19 @@
+name: Tarefa
+description: Nova tarefa da Unidade II, já adicionada ao Kanban
+projects: ["marcos-grocha/4"]
+body:
+  - type: textarea
+    id: descricao
+    attributes:
+      label: O que precisa ser feito
+      description: Descreva a tarefa e o requisito que ela atende.
+    validations:
+      required: true
+  - type: textarea
+    id: checklist
+    attributes:
+      label: Checklist
+      value: |
+        - [ ]
+    validations:
+      required: true

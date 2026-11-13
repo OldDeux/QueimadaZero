@@ -4,6 +4,34 @@ Registro das alterações realizadas no projeto **QueimadaZero**.
 
 O formato é baseado em [Keep a Changelog](https://keepachangelog.com/pt-BR/1.1.0/).
 
+## [0.5.0] - 2026-11-13
+
+Início da **Unidade II — Planejamento do desenvolvimento do aplicativo**.
+
+### Adicionado
+
+* Criação de 26 issues (#6 a #31) a partir dos requisitos da Unidade II, cada uma com checklist do que deve ser entregue.
+* Criação do milestone **Unidade II** para agrupar as issues da entrega.
+* Criação das labels por área: `área: arquitetura`, `área: telas`, `área: apis`, `área: firebase`, `área: alertas`, `área: denúncia`, `área: offline` e `testes`.
+* Criação do Project público [QueimadaZero - Unidade II](https://github.com/users/marcos-grocha/projects/4), com todos os integrantes como colaboradores.
+* Quadro Kanban com as colunas **Backlog geral**, **Em desenvolvimento**, **Em review** e **Concluído**.
+
+### Fluxo de trabalho
+
+* Cada PR deve citar a issue com `Closes #N` na descrição. O template de PR (`.github/pull_request_template.md`) já traz esse campo.
+* Regras automáticas do Project:
+  * item adicionado ao Project vai para **Backlog geral**;
+  * PR ligado a uma issue leva o card para **Em review**;
+  * PR mergeado ou issue fechada vai para **Concluído**;
+  * issue reaberta volta para **Em desenvolvimento**.
+* Só a movimentação para **Em desenvolvimento**, ao começar uma tarefa, é manual.
+* Dependências entre as issues foram registradas como "blocked by", indicando a ordem de desenvolvimento.
+* O template de issue **Tarefa** (`.github/ISSUE_TEMPLATE/tarefa.yml`) adiciona a issue nova ao Project automaticamente.
+* PRs e issues criadas sem o template não aparecem para seleção na lateral, pois o Project pertence à conta `marcos-grocha` e não pode ser vinculado ao repositório do `OldDeux`. Eles devem ser adicionados pelo próprio Project, em **+ Add item** colando o link, ou pela linha de comando: `gh project item-add 4 --owner marcos-grocha --url <link>`.
+* Ao abrir um PR, adicioná-lo ao Project e movê-lo para **Em review**.
+
+---
+
 ## [0.4.0] - 2026-09-30
 
 Início da **Atividade 04 — Prototipação**.

@@ -4,6 +4,26 @@ Registro das alterações realizadas no projeto **QueimadaZero**.
 
 O formato é baseado em [Keep a Changelog](https://keepachangelog.com/pt-BR/1.1.0/).
 
+## [0.5.0] - 2026-11-13
+
+Início da **Unidade II — Planejamento do desenvolvimento do aplicativo**.
+
+### Adicionado
+
+* Criação de 26 issues (#6 a #31) a partir dos requisitos da Unidade II, cada uma com checklist do que deve ser entregue.
+* Criação do milestone **Unidade II** para agrupar as issues da entrega.
+* Criação das labels por área: `área: arquitetura`, `área: telas`, `área: apis`, `área: firebase`, `área: alertas`, `área: denúncia`, `área: offline` e `testes`.
+* Criação do Project público [QueimadaZero - Unidade II](https://github.com/users/marcos-grocha/projects/4), com todos os integrantes como colaboradores.
+* Quadro Kanban com as colunas **Backlog geral**, **Em desenvolvimento**, **Em review** e **Concluído**.
+
+### Fluxo de trabalho
+
+* Cada PR deve citar a issue com `Closes #N` na descrição, para fechar a issue e mover o card para **Concluído** no merge.
+* A movimentação para **Em desenvolvimento** e **Em review** é feita manualmente no quadro.
+* Issues novas devem ser adicionadas ao Project pela lateral da issue, pois o Project não fica vinculado ao repositório.
+
+---
+
 ## [0.4.0] - 2026-09-30
 
 Início da **Atividade 04 — Prototipação**.

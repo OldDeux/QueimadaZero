@@ -18,9 +18,16 @@ Início da **Unidade II — Planejamento do desenvolvimento do aplicativo**.
 
 ### Fluxo de trabalho
 
-* Cada PR deve citar a issue com `Closes #N` na descrição, para fechar a issue e mover o card para **Concluído** no merge.
-* A movimentação para **Em desenvolvimento** e **Em review** é feita manualmente no quadro.
-* Issues e PRs novos não aparecem para seleção na lateral, pois o Project pertence à conta `marcos-grocha` e não pode ser vinculado ao repositório do `OldDeux`. Eles devem ser adicionados pelo próprio Project, em **+ Add item** colando o link, ou pela linha de comando: `gh project item-add 4 --owner marcos-grocha --url <link>`.
+* Cada PR deve citar a issue com `Closes #N` na descrição. O template de PR (`.github/pull_request_template.md`) já traz esse campo.
+* Regras automáticas do Project:
+  * item adicionado ao Project vai para **Backlog geral**;
+  * PR ligado a uma issue leva o card para **Em review**;
+  * PR mergeado ou issue fechada vai para **Concluído**;
+  * issue reaberta volta para **Em desenvolvimento**.
+* Só a movimentação para **Em desenvolvimento**, ao começar uma tarefa, é manual.
+* Dependências entre as issues foram registradas como "blocked by", indicando a ordem de desenvolvimento.
+* O template de issue **Tarefa** (`.github/ISSUE_TEMPLATE/tarefa.yml`) adiciona a issue nova ao Project automaticamente.
+* PRs e issues criadas sem o template não aparecem para seleção na lateral, pois o Project pertence à conta `marcos-grocha` e não pode ser vinculado ao repositório do `OldDeux`. Eles devem ser adicionados pelo próprio Project, em **+ Add item** colando o link, ou pela linha de comando: `gh project item-add 4 --owner marcos-grocha --url <link>`.
 * Ao abrir um PR, adicioná-lo ao Project e movê-lo para **Em review**.
 
 ---

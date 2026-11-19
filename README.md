@@ -1,5 +1,7 @@
 # QueimadaZero
 
+[![CI](https://github.com/OldDeux/QueimadaZero/actions/workflows/ci.yml/badge.svg)](https://github.com/OldDeux/QueimadaZero/actions/workflows/ci.yml)
+
 Projeto de aplicação voltado para alertas de queimadas, monitoramento de focos e apoio à prevenção dos impactos causados pela fumaça.
 
 O aplicativo tem como proposta reunir informações sobre queimadas, permitir notificações de fumaça e ajudar diferentes usuários, como moradores, brigadistas, bombeiros e agentes ambientais, a acompanhar situações de risco.
@@ -119,6 +121,16 @@ docker compose run --rm flutter test
 ```
 
 Para adicionar um pacote: `docker compose run --rm flutter pub add <pacote>`.
+
+Antes de abrir um PR, formate o código, senão o CI falha:
+
+```bash
+docker compose run --rm --entrypoint dart flutter format lib test
+```
+
+### CI
+
+Todo PR para a `main` roda o workflow [CI](.github/workflows/ci.yml) no GitHub Actions, que verifica a formatação, roda o `flutter analyze` e o `flutter test`. A versão do Flutter é lida do `Dockerfile`, então o CI usa sempre a mesma do ambiente local. Se o CI falhar, o resultado aparece no próprio PR.
 
 ### Observações
 

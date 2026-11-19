@@ -4,6 +4,18 @@ Registro das alterações realizadas no projeto **QueimadaZero**.
 
 O formato é baseado em [Keep a Changelog](https://keepachangelog.com/pt-BR/1.1.0/).
 
+## [0.8.0] - 2026-11-19
+
+CI no GitHub Actions (#36).
+
+### Adicionado
+
+* Workflow `.github/workflows/ci.yml` que roda em todo PR e push para a `main`: verifica a formatação, roda o `flutter analyze` e o `flutter test`.
+* A versão do Flutter do CI é lida do `Dockerfile`, para ficar igual à do ambiente local.
+* Selo do CI e instruções de formatação no `README.md`.
+
+---
+
 ## [0.7.0] - 2026-11-13
 
 Estrutura do app com Clean Architecture (#6).

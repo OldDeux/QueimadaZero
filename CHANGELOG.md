@@ -4,6 +4,31 @@ Registro das alterações realizadas no projeto **QueimadaZero**.
 
 O formato é baseado em [Keep a Changelog](https://keepachangelog.com/pt-BR/1.1.0/).
 
+## [0.9.0] - 2026-11-19
+
+Gerência de estado com Riverpod (#7).
+
+### Adicionado
+
+* Pacote `flutter_riverpod` 3.5.0 para gerência de estado e injeção de dependências.
+* `AsyncValueView` em `core/presentation/`, que mostra os estados padrão de toda tela: carregando, sucesso, erro e offline, com o botão "Tentar novamente".
+* Providers da feature `dicas` em `presentation/providers/dicas_providers.dart`.
+* 2 testes da tela de dicas: estado offline e recarga pelo botão "Tentar novamente" (8 testes no total).
+* Justificativa da escolha do Riverpod em `docs/justificativas.md`.
+
+### Alterado
+
+* A tela de dicas passa a ser um `ConsumerWidget` que observa o `dicasProvider`.
+* `Failure` passa a implementar `Exception`, e o `Result` ganha o `getOrThrow()`, para a falha virar o estado de erro do provider.
+* A nova tentativa automática do Riverpod foi desligada no `main.dart`, para uma API fora do ar não ser chamada de novo sem o usuário saber.
+* `docs/arquitetura.md` e a seção "Organização do código" de `docs/justificativas.md` atualizadas para a Clean Architecture com Riverpod.
+
+### Removido
+
+* `injection.dart` e a classe `AppDependencies`, substituídos pelos providers.
+
+---
+
 ## [0.8.0] - 2026-11-19
 
 CI no GitHub Actions (#36).

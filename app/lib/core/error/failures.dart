@@ -3,7 +3,10 @@
 /// A camada de dados converte as exceções técnicas (ver `exceptions.dart`)
 /// nestas falhas, para que a interface mostre um estado de erro amigável
 /// em vez de quebrar.
-sealed class Failure {
+///
+/// Implementa [Exception] para poder ser lançada dentro dos providers: o
+/// Riverpod a entrega à tela como `AsyncValue.error`.
+sealed class Failure implements Exception {
   const Failure(this.message);
 
   final String message;

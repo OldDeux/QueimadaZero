@@ -145,11 +145,23 @@ A arquitetura tem três partes:
 
 ### Organização do código
 
-Para o código não virar uma bagunça, vamos separar o app em três partes:
+O app segue a **Clean Architecture**, separado por funcionalidade (focos, relato, alertas, qualidade do ar e dicas). Cada funcionalidade tem três partes:
 
-- **Telas:** o que aparece para a pessoa (mapa, relato, alertas...).
-- **Serviços:** o que conversa com fora do app (Firebase, GPS, câmera, notificações).
-- **Modelos:** como os dados são organizados, por exemplo um `Relato` (foto, local, descrição, status e data) e um `Foco` (local, nível de risco, fonte e horário).
+- **Domínio:** as regras e os dados do negócio, por exemplo um `Relato` (foto, local, descrição, status e data) e um `Foco` (local, nível de risco, fonte e horário).
+- **Dados:** o que conversa com fora do app (Firebase, INPE, GPS, câmera, dados salvos no celular).
+- **Apresentação:** o que aparece para a pessoa (mapa, relato, alertas...).
+
+Assim dá para trocar uma fonte de dados, como a API de qualidade do ar, sem mexer nas telas. Os detalhes estão em [`arquitetura.md`](arquitetura.md).
+
+### Gerência de estado: Riverpod
+
+Entre Riverpod e Bloc, escolhemos o **Riverpod**:
+
+- **Menos código para cada tela.** No Bloc, cada tela precisa de eventos, estados e uma classe Bloc. No Riverpod, um provider já resolve, o que ajuda um grupo que está aprendendo Flutter.
+- **Já faz a ligação entre as partes.** O Riverpod também entrega a cada tela o que ela precisa (repositório, caso de uso), sem precisar de outro pacote para isso.
+- **Combina com o que o app faz.** O app atualiza a qualidade do ar a cada 5 minutos e acompanha a posição do GPS. O Riverpod lida bem com dados que mudam com o tempo e recalcula sozinho o que depende deles, como a distância até os focos.
+- **Fácil de testar.** Nos testes, dá para trocar qualquer parte por uma versão falsa, por exemplo simular a API do INPE fora do ar.
+- **Estados padronizados.** Todo dado carregado tem os mesmos estados: carregando, sucesso, erro e offline. Todas as telas mostram esses estados do mesmo jeito, então o app nunca quebra quando uma API falha.
 
 A fonte dos dados de qualidade do ar ainda vamos pesquisar. Precisamos de uma que use o índice brasileiro (IQAr), que é o que aparece no protótipo.
 

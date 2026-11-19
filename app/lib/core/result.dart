@@ -17,6 +17,11 @@ sealed class Result<T> {
       Failed<T>(:final failure) => onFailure(failure),
     };
   }
+
+  /// Devolve o valor ou lança a [Failure].
+  ///
+  /// Usado nos providers, onde a falha vira o estado de erro da tela.
+  T getOrThrow() => fold((failure) => throw failure, (value) => value);
 }
 
 final class Success<T> extends Result<T> {

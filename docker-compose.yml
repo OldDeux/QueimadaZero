@@ -1,0 +1,10 @@
+services:
+  flutter:
+    build: .
+    image: queimadazero-flutter:3.47.9
+    volumes:
+      - ./app:/workspace/app
+      - pub-cache:/root/.pub-cache
+
+volumes:
+  pub-cache:

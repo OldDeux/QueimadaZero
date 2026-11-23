@@ -1,0 +1,48 @@
+name: CI
+
+on:
+  pull_request:
+    branches: [main]
+  push:
+    branches: [main]
+
+concurrency:
+  group: ci-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  flutter:
+    name: Analyze e testes
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    defaults:
+      run:
+        working-directory: app
+
+    steps:
+      - uses: actions/checkout@v7
+
+      # A versão do Flutter vem do Dockerfile, para o CI e o ambiente local
+      # usarem sempre a mesma.
+      - name: Ler a versão do Flutter do Dockerfile
+        id: versao
+        working-directory: .
+        run: echo "flutter=$(sed -n 's/^ARG FLUTTER_VERSION=//p' Dockerfile)" >> "$GITHUB_OUTPUT"
+
+      - uses: subosito/flutter-action@v2
+        with:
+          flutter-version: ${{ steps.versao.outputs.flutter }}
+          channel: stable
+          cache: true
+
+      - name: Instalar dependências
+        run: flutter pub get
+
+      - name: Verificar formatação
+        run: dart format --output=none --set-exit-if-changed lib test
+
+      - name: Analisar o código
+        run: flutter analyze
+
+      - name: Rodar os testes
+        run: flutter test

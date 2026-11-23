@@ -4,6 +4,108 @@ Registro das alterações realizadas no projeto **QueimadaZero**.
 
 O formato é baseado em [Keep a Changelog](https://keepachangelog.com/pt-BR/1.1.0/).
 
+## [0.9.0] - 2026-11-19
+
+Gerência de estado com Riverpod (#7).
+
+### Adicionado
+
+* Pacote `flutter_riverpod` 3.5.0 para gerência de estado e injeção de dependências.
+* `AsyncValueView` em `core/presentation/`, que mostra os estados padrão de toda tela: carregando, sucesso, erro e offline, com o botão "Tentar novamente".
+* Providers da feature `dicas` em `presentation/providers/dicas_providers.dart`.
+* 2 testes da tela de dicas: estado offline e recarga pelo botão "Tentar novamente" (8 testes no total).
+* Justificativa da escolha do Riverpod em `docs/justificativas.md`.
+
+### Alterado
+
+* A tela de dicas passa a ser um `ConsumerWidget` que observa o `dicasProvider`.
+* `Failure` passa a implementar `Exception`, e o `Result` ganha o `getOrThrow()`, para a falha virar o estado de erro do provider.
+* A nova tentativa automática do Riverpod foi desligada no `main.dart`, para uma API fora do ar não ser chamada de novo sem o usuário saber.
+* `docs/arquitetura.md` e a seção "Organização do código" de `docs/justificativas.md` atualizadas para a Clean Architecture com Riverpod.
+
+### Removido
+
+* `injection.dart` e a classe `AppDependencies`, substituídos pelos providers.
+
+---
+
+## [0.8.0] - 2026-11-19
+
+CI no GitHub Actions (#36).
+
+### Adicionado
+
+* Workflow `.github/workflows/ci.yml` que roda em todo PR e push para a `main`: verifica a formatação, roda o `flutter analyze` e o `flutter test`.
+* A versão do Flutter do CI é lida do `Dockerfile`, para ficar igual à do ambiente local.
+* Selo do CI e instruções de formatação no `README.md`.
+
+---
+
+## [0.7.0] - 2026-11-13
+
+Estrutura do app com Clean Architecture (#6).
+
+### Adicionado
+
+* Estrutura de pastas por feature (`alertas`, `denuncia`, `dicas`, `focos`, `qualidade_ar`), cada uma com as camadas `domain`, `data` e `presentation`.
+* `core/` com as falhas (`Failure`), as exceções da camada de dados (`AppException`), o tipo `Result` e o contrato `UseCase`.
+* Feature `dicas` completa como exemplo de ponta a ponta: entidade, contrato, caso de uso, fonte local, modelo, repositório e tela.
+* `injection.dart` como ponto único de ligação das camadas, com injeção manual até a decisão da issue #7.
+* 6 testes automatizados: caso de uso, repositório (incluindo a conversão de erro em falha), modelo e abertura do app.
+* `docs/arquitetura.md` com as regras das camadas e o passo a passo para criar uma funcionalidade.
+
+### Alterado
+
+* Nome do pacote de `app` para `queimada_zero`.
+* Remoção do app de exemplo (contador) gerado pelo Flutter. A tela inicial provisória passa a ser a de dicas.
+
+---
+
+## [0.6.0] - 2026-11-13
+
+Ambiente de desenvolvimento com Docker (#34).
+
+### Adicionado
+
+* `Dockerfile` com o Flutter 3.47.9 (Dart 3.13.7), a mesma versão usada para criar o projeto em `app/`, com download conferido por checksum.
+* `docker-compose.yml` com o serviço `flutter`, que compartilha a pasta `app/` com o container e guarda os pacotes no volume `pub-cache`.
+* Seção **Ambiente de desenvolvimento** no `README.md`, com os comandos de `pub get`, `analyze` e `test` pelo container.
+
+### Observações
+
+* A imagem `cirruslabs/flutter` foi descartada porque ainda não publica o Flutter 3.47, exigido pelo `pubspec.yaml` do projeto.
+* O container não roda emulador; o APK e a versão web ficam para a issue #35.
+
+---
+
+## [0.5.0] - 2026-11-13
+
+Início da **Unidade II — Planejamento do desenvolvimento do aplicativo**.
+
+### Adicionado
+
+* Criação de 26 issues (#6 a #31) a partir dos requisitos da Unidade II, cada uma com checklist do que deve ser entregue.
+* Criação do milestone **Unidade II** para agrupar as issues da entrega.
+* Criação das labels por área: `área: arquitetura`, `área: telas`, `área: apis`, `área: firebase`, `área: alertas`, `área: denúncia`, `área: offline` e `testes`.
+* Criação do Project público [QueimadaZero - Unidade II](https://github.com/users/marcos-grocha/projects/4), com todos os integrantes como colaboradores.
+* Quadro Kanban com as colunas **Backlog geral**, **Em desenvolvimento**, **Em review** e **Concluído**.
+
+### Fluxo de trabalho
+
+* Cada PR deve citar a issue com `Closes #N` na descrição. O template de PR (`.github/pull_request_template.md`) já traz esse campo.
+* Regras automáticas do Project:
+  * item adicionado ao Project vai para **Backlog geral**;
+  * PR ligado a uma issue leva o card para **Em review**;
+  * PR mergeado ou issue fechada vai para **Concluído**;
+  * issue reaberta volta para **Em desenvolvimento**.
+* Só a movimentação para **Em desenvolvimento**, ao começar uma tarefa, é manual.
+* Dependências entre as issues foram registradas como "blocked by", indicando a ordem de desenvolvimento.
+* O template de issue **Tarefa** (`.github/ISSUE_TEMPLATE/tarefa.yml`) adiciona a issue nova ao Project automaticamente.
+* PRs e issues criadas sem o template não aparecem para seleção na lateral, pois o Project pertence à conta `marcos-grocha` e não pode ser vinculado ao repositório do `OldDeux`. Eles devem ser adicionados pelo próprio Project, em **+ Add item** colando o link, ou pela linha de comando: `gh project item-add 4 --owner marcos-grocha --url <link>`.
+* Ao abrir um PR, adicioná-lo ao Project e movê-lo para **Em review**.
+
+---
+
 ## [0.4.0] - 2026-09-30
 
 Início da **Atividade 04 — Prototipação**.

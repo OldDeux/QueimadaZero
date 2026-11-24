@@ -4,6 +4,27 @@ Registro das alterações realizadas no projeto **QueimadaZero**.
 
 O formato é baseado em [Keep a Changelog](https://keepachangelog.com/pt-BR/1.1.0/).
 
+## [0.10.0] - 2026-11-24
+
+Navegação entre as telas e tema de alto contraste (#15).
+
+### Adicionado
+
+* Navegação com o pacote `go_router`: menu inferior com 4 abas (Mapa, Meus relatos, Qualidade do ar e Orientações) e as telas de relato, alertas e configurações abrindo por cima do menu.
+* Sino (alertas) e ajustes (configurações) no topo das abas, com descrição para o leitor de tela.
+* Telas provisórias de mapa, relato, meus relatos, qualidade do ar, alertas e configurações, indicando a issue que implementa cada uma.
+* Tema claro de alto contraste em `core/theme/`, com a paleta de `docs/justificativas.md`, botões de 56px de altura e o gradiente laranja → vermelho do mapa de calor.
+* Fonte Manrope do protótipo em `app/assets/fonts/` (pesos 400 a 800), incluída no app para funcionar offline, com a licença OFL.
+* Testes de contraste (WCAG), de fonte, de navegação entre as telas e de rótulos do menu em uma linha num celular de 375px.
+* `docs/navegacao.md` com o diagrama do fluxo e a tabela de rotas.
+
+### Alterado
+
+* O app abre no Mapa, e não mais nas dicas.
+* O teste de abertura do app foi substituído pelos testes de navegação.
+
+---
+
 ## [0.9.0] - 2026-11-19
 
 Gerência de estado com Riverpod (#7).

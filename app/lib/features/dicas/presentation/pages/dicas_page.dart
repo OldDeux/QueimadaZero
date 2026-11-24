@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
+import '../../../../core/presentation/acoes_topo.dart';
 import '../../../../core/presentation/async_value_view.dart';
 import '../../domain/entities/dica.dart';
 import '../providers/dicas_providers.dart';
@@ -15,7 +16,10 @@ class DicasPage extends ConsumerWidget {
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     return Scaffold(
-      appBar: AppBar(title: const Text('Dicas respiratórias')),
+      appBar: AppBar(
+        title: const Text('Dicas respiratórias'),
+        actions: const [AcoesTopo()],
+      ),
       body: AsyncValueView(
         value: ref.watch(dicasProvider),
         onRetry: () => ref.invalidate(dicasProvider),

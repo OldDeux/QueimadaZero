@@ -54,4 +54,40 @@ void main() {
     expect(find.text('Beba água'), findsOneWidget);
     expect(repositorio.chamadas, 2);
   });
+
+  testWidgets('mostra dicas de proteção e aviso de acesso offline', (
+    tester,
+  ) async {
+    final repositorio = _RepositorioFalso([
+      const Success([
+        Dica(titulo: 'Feche janelas e portas', descricao: 'Evite a fumaça.'),
+      ]),
+    ]);
+
+    await _abrir(tester, repositorio);
+
+    expect(find.text('Cuidados do dia a dia'), findsOneWidget);
+    expect(find.text('Feche janelas e portas'), findsOneWidget);
+    expect(
+      find.text('As dicas ficam disponíveis mesmo sem internet.'),
+      findsOneWidget,
+    );
+  });
+
+  testWidgets('destaca dicas para pessoas com asma ou DPOC', (tester) async {
+    final repositorio = _RepositorioFalso([
+      const Success([
+        Dica(
+          titulo: 'Tenha a medicação por perto',
+          descricao: 'Siga o plano do médico.',
+          grupoDeRisco: true,
+        ),
+      ]),
+    ]);
+
+    await _abrir(tester, repositorio);
+
+    expect(find.text('Atenção para quem tem asma ou DPOC'), findsOneWidget);
+    expect(find.text('Tenha a medicação por perto'), findsOneWidget);
+  });
 }

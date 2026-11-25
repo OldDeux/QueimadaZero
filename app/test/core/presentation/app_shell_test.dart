@@ -7,6 +7,8 @@ import 'package:queimada_zero/app.dart';
 import 'package:queimada_zero/core/theme/app_theme.dart';
 import 'package:queimada_zero/main.dart';
 
+import '../../helpers/qualidade_ar_falsa.dart';
+
 const _rotulos = ['Mapa', 'Meus relatos', 'Qualidade do ar', 'Orientações'];
 
 /// Carrega a Manrope de verdade: por padrão, os testes usam uma fonte
@@ -30,7 +32,11 @@ void main() {
     addTearDown(tester.view.reset);
 
     await tester.pumpWidget(
-      const ProviderScope(retry: semNovaTentativa, child: QueimadaZeroApp()),
+      ProviderScope(
+        retry: semNovaTentativa,
+        overrides: [qualidadeArFalsa],
+        child: const QueimadaZeroApp(),
+      ),
     );
     await tester.pumpAndSettle();
 

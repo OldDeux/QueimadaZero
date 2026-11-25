@@ -4,9 +4,15 @@ import 'package:flutter_test/flutter_test.dart';
 import 'package:queimada_zero/app.dart';
 import 'package:queimada_zero/main.dart';
 
+import '../../helpers/qualidade_ar_falsa.dart';
+
 Future<void> _abrirApp(WidgetTester tester) async {
   await tester.pumpWidget(
-    const ProviderScope(retry: semNovaTentativa, child: QueimadaZeroApp()),
+    ProviderScope(
+      retry: semNovaTentativa,
+      overrides: [qualidadeArFalsa],
+      child: const QueimadaZeroApp(),
+    ),
   );
   await tester.pumpAndSettle();
 }
@@ -14,11 +20,24 @@ Future<void> _abrirApp(WidgetTester tester) async {
 Finder _titulo(String texto) => find.widgetWithText(AppBar, texto);
 
 void main() {
-  testWidgets('o app abre no mapa com o botão de relato', (tester) async {
+  testWidgets('o app abre na Home com qualidade do ar e botão de relato', (
+    tester,
+  ) async {
     await _abrirApp(tester);
 
     expect(_titulo('QueimadaZero'), findsOneWidget);
+    expect(find.text('QUALIDADE DO AR · ARACAJU'), findsOneWidget);
     expect(find.text('Estou vendo fumaça'), findsOneWidget);
+  });
+
+  testWidgets('o atalho da Home abre os alertas de proximidade', (
+    tester,
+  ) async {
+    await _abrirApp(tester);
+
+    await tester.tap(find.text('Alertas de proximidade'));
+    await tester.pumpAndSettle();
+    expect(_titulo('Alertas'), findsOneWidget);
   });
 
   testWidgets('o menu inferior troca entre as 4 abas', (tester) async {

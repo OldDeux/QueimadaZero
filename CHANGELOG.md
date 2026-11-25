@@ -4,6 +4,22 @@ Registro das alterações realizadas no projeto **QueimadaZero**.
 
 O formato é baseado em [Keep a Changelog](https://keepachangelog.com/pt-BR/1.1.0/).
 
+## [0.11.0] - 2026-11-25
+
+Tela de dicas respiratórias (#13).
+
+### Alterado
+
+* A tela de orientações agora separa os cuidados do dia a dia das dicas para pessoas com asma ou DPOC, em cards com destaques visuais.
+* Conteúdo e navegação seguem o tema de alto contraste do aplicativo.
+
+### Adicionado
+
+* Aviso de que as dicas ficam disponíveis sem internet, usando a fonte local já existente.
+* Testes para a exibição das dicas e o destaque dos grupos de risco.
+
+---
+
 ## [0.10.0] - 2026-11-24
 
 Navegação entre as telas e tema de alto contraste (#15).

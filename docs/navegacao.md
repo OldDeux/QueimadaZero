@@ -26,7 +26,7 @@ flowchart TD
 
 | Rota | Tela | Tipo | Issue que implementa |
 |---|---|---|---|
-| `/mapa` | Mapa de focos e botão "Estou vendo fumaça" | Aba (inicial) | #11 |
+| `/mapa` | Home: card de qualidade do ar, atalho para os alertas, mapa de focos e botão "Estou vendo fumaça" | Aba (inicial) | #10 e #11 |
 | `/relatos` | Meus relatos | Aba | #14 |
 | `/qualidade-ar` | Qualidade do ar | Aba | #17 |
 | `/dicas` | Orientações (dicas respiratórias) | Aba | #13 |
@@ -36,7 +36,7 @@ flowchart TD
 
 * **Abas:** ficam no menu fixo embaixo, ao alcance do polegar. Cada aba guarda a própria pilha de telas, e tocar na aba atual volta para o início dela.
 * **Telas por cima do menu:** abrem com `context.push(...)` e têm botão de voltar. O relato esconde o menu para a pessoa focar no envio.
-* **Alerta de proximidade em 2 toques:** tocar na notificação abre os alertas, e tocar no alerta abre o mapa. A ligação com a notificação é da issue #22.
+* **Alerta de proximidade em 2 toques:** tocar na notificação (ou no botão "Alertas de proximidade" da Home) abre os alertas, e tocar no alerta abre o mapa. A ligação com a notificação é da issue #22.
 * **Sem tela de login:** a decisão está em `justificativas.md`. O relato é anônimo, e os relatos ficam salvos no celular.
 
 As constantes das rotas ficam em `core/router/rotas.dart`. Use sempre essas constantes, nunca o texto do caminho.

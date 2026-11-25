@@ -4,6 +4,30 @@ Registro das alterações realizadas no projeto **QueimadaZero**.
 
 O formato é baseado em [Keep a Changelog](https://keepachangelog.com/pt-BR/1.1.0/).
 
+## [0.11.0] - 2026-11-24
+
+Home com o card de qualidade do ar (#10).
+
+### Adicionado
+
+* Feature `qualidade_ar` completa na Clean Architecture: entidade `QualidadeAr` com as faixas do US AQI, caso de uso `BuscarQualidadeAr`, fonte de dados da Open-Meteo (CAMS) com timeout de 10 segundos e repositório que converte as falhas de rede e de servidor.
+* Card na Home com a "cor do céu" da cidade conforme o índice: verde para o ar bom, indo para o laranja, o vermelho e o escuro conforme o ar piora, com o índice, o nível e uma orientação curta.
+* Estados do card: carregando, dado atual com o horário da medição, dado salvo com o horário quando a atualização falha, e erro amigável com "Tentar novamente".
+* Botão "Alertas de proximidade" na Home, para chegar ao alerta em até 2 toques.
+* Pacote `http` 1.6.0.
+* Testes das faixas do AQI, da fonte de dados (resposta, erro HTTP, formato inesperado, sem conexão e timeout), do repositório, do contraste das cores do céu e dos estados do card.
+
+### Alterado
+
+* A Home passa a rolar, com o botão "Estou vendo fumaça" fixo embaixo, ao alcance do polegar.
+* Os testes que abrem o app inteiro usam uma qualidade do ar falsa, para não depender da internet.
+
+### Observações
+
+* A localização é fixa em Aracaju até a geolocalização (#20). O cache em disco é da issue #18 e a atualização a cada 5 minutos, da #17.
+
+---
+
 ## [0.10.0] - 2026-11-24
 
 Navegação entre as telas e tema de alto contraste (#15).

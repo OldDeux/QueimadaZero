@@ -24,3 +24,8 @@ final class ServerException extends AppException {
 final class CacheException extends AppException {
   const CacheException([super.message = 'Falha no armazenamento local.']);
 }
+
+/// O GPS está desligado ou a permissão de localização foi retirada.
+final class LocalizacaoException extends AppException {
+  const LocalizacaoException([super.message = 'Localização indisponível.']);
+}

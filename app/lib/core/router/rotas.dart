@@ -10,4 +10,5 @@ abstract final class Rotas {
   static const relatar = '/relatar';
   static const alertas = '/alertas';
   static const configuracoes = '/configuracoes';
+  static const permissaoLocalizacao = '/permissao-localizacao';
 }

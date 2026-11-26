@@ -18,6 +18,7 @@ flowchart TD
 
     Mapa & Relatos & Ar & Dicas -- sino --> Alertas["Alertas recebidos"]
     Mapa & Relatos & Ar & Dicas -- ajustes --> Config["Configurações<br/>localização, som e vibração"]
+    Config -- "ligar a localização" --> Permissao["Explicação da localização<br/>antes do pedido do celular"]
 
     Notificacao(["Notificação de alerta"]) -.-> Alertas
 ```
@@ -33,6 +34,7 @@ flowchart TD
 | `/relatar` | Relato de fumaça | Por cima do menu | #12 |
 | `/alertas` | Alertas recebidos | Por cima do menu | #14 |
 | `/configuracoes` | Configurações | Por cima do menu | #20 |
+| `/permissao-localizacao` | Explicação da localização, antes do pedido do celular | Por cima do menu | #20 |
 
 * **Abas:** ficam no menu fixo embaixo, ao alcance do polegar. Cada aba guarda a própria pilha de telas, e tocar na aba atual volta para o início dela.
 * **Telas por cima do menu:** abrem com `context.push(...)` e têm botão de voltar. O relato esconde o menu para a pessoa focar no envio.

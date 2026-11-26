@@ -4,6 +4,20 @@ Registro das alterações realizadas no projeto **QueimadaZero**.
 
 O formato é baseado em [Keep a Changelog](https://keepachangelog.com/pt-BR/1.1.0/).
 
+## [Unreleased]
+
+Atualização da documentação da Unidade II (#31).
+
+### Alterado
+
+* `docs/requisitos.md`: situação das funcionalidades em relação às issues e aos PRs atuais.
+* `docs/personas.md`: relação de Ana Maria e Joaquim com as telas implementadas e planejadas.
+* `docs/pesquisa.md`: revisão do portal de dados do INPE e do papel do Prevfogo/IBAMA.
+* `docs/justificativas.md`: decisões de interface, estado e integrações técnicas da Unidade II.
+* `README.md`: contribuições registradas e instruções para executar o Flutter Web pelo Docker.
+
+---
+
 ## [0.11.0] - 2026-11-25
 
 Tela de dicas respiratórias (#13).

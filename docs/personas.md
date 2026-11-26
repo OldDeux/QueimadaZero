@@ -81,3 +81,11 @@ Joaquim também é um usuário importante, principalmente pelo uso do aplicativo
 Para Ana, o aplicativo tem um papel direto na prevenção. Um alerta pode ajudá-la a decidir rapidamente se deve fechar as janelas, evitar sair, mudar seu trajeto ou seguir alguma orientação de proteção.
 
 Por isso, a interface deve priorizar três respostas principais:  há algum risco perto de mim, onde ele está e o que devo fazer agora .Essa prioridade reforça a proposta do QueimadaZero de transformar informações sobre queimadas em alertas e orientações realmente úteis para o usuário.
+
+## Relação com o desenvolvimento da Unidade II (26/11/2026)
+
+**Ana Maria:** a tela de Dicas respiratórias (#13) já mostra cuidados diários e orientações específicas para pessoas com problemas respiratórios. A tela de Alertas está sendo preparada no PR #44, mas ainda não recebe notificações reais. O mapa de focos continua pendente (#11).
+
+**Joaquim Ferreira:** a navegação simplificada permite chegar rapidamente à função "Estou vendo fumaça", mas o envio com foto e localização ainda depende da issue #12. As dicas estão disponíveis localmente; já o mapa offline e a fila de denúncias sem internet dependem de #19 e #29.
+
+Dessa forma, as telas atuais atendem parte das necessidades das personas, enquanto mapa, alertas de proximidade e envio de relatos ainda fazem parte das próximas etapas.

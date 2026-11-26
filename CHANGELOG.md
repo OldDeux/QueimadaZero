@@ -25,6 +25,22 @@ Geolocalização em tempo real com opção de desativar (#20).
 
 ---
 
+## [Unreleased]
+
+Primeira etapa da tela de notificações e alertas (#14).
+
+### Adicionado
+
+* Tela de alertas com mensagem de histórico vazio e informação sobre a integração futura das notificações.
+* Tela de meus relatos com estado vazio e explicação dos status `Enviado` e `Na fila`.
+* Testes de interface e adaptação em telas pequenas.
+
+### Pendente
+
+* Integração com alertas e denúncias reais e armazenamento offline.
+
+---
+
 ## [0.11.0] - 2026-11-25
 
 Tela de dicas respiratórias (#13).

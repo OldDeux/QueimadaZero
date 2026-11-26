@@ -10,6 +10,24 @@ A definição das funcionalidades e requisitos foi baseada no estudo de caso, na
 
 A persona prioritária é Ana Maria, que representa uma usuária que precisa receber informações rápidas sobre queimadas próximas, compreender o risco da fumaça e saber quais medidas de proteção pode tomar. Joaquim Ferreira representa o uso do aplicativo por um brigadista voluntário, principalmente em situações de campo e em regiões com conexão instável.
 
+### Acompanhamento da implementação — Unidade II (26/11/2026)
+
+Os requisitos abaixo continuam sendo os objetivos do projeto. Esta tabela registra o que já existe no aplicativo e o que ainda está em desenvolvimento, sem confundir protótipo com funcionalidade pronta.
+
+| Funcionalidade | Situação em 26/11/2026 |
+|---|---|
+| F01 — Mapa | A rota e a tela inicial existem; os focos no mapa dependem das issues #11 e #16. |
+| F02 — Mapa de calor | Ainda pendente (#11). |
+| F03 — Registro de fumaça | Botão e rota existentes; câmera, GPS e envio pendentes (#12). |
+| F04 — Meus relatos | Interface e estados vazios no PR #44; histórico real ainda pendente (#14). |
+| F05 — Alertas de proximidade | Interface de histórico no PR #44; geração e recebimento de alertas dependem de #21 e #22. |
+| F06 — Qualidade do ar | Tela provisória; integração de dados ambientais em andamento no PR #41 (#17). |
+| F07 — Dicas de proteção | Tela implementada com cards e conteúdo local na issue #13 (PR #43 incorporado). |
+| F08 — Consulta offline | Dicas locais disponíveis; cache de mapas e dados ambientais segue pendente (#18 e #19). |
+| F09 — Dados públicos de queimadas | Integração dos focos do INPE pendente (#16). |
+
+A base do aplicativo já conta com navegação (#15), Clean Architecture (#6), Riverpod (#7), Docker (#34) e CI (#36). Os requisitos que dependem de GPS, Firebase e dados externos ainda precisam ser validados com suas respectivas integrações.
+
 ---
 
 ## 2. Funcionalidades

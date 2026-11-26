@@ -39,6 +39,17 @@ Primeira etapa da tela de notificações e alertas (#14).
 
 * Integração com alertas e denúncias reais e armazenamento offline.
 
+
+### Alterado
+
+Atualização da documentação da Unidade II (#31).
+
+* `docs/requisitos.md`: situação das funcionalidades em relação às issues e aos PRs atuais.
+* `docs/personas.md`: relação de Ana Maria e Joaquim com as telas implementadas e planejadas.
+* `docs/pesquisa.md`: revisão do portal de dados do INPE e do papel do Prevfogo/IBAMA.
+* `docs/justificativas.md`: decisões de interface, estado e integrações técnicas da Unidade II.
+* `README.md`: contribuições registradas e instruções para executar o Flutter Web pelo Docker.
+
 ---
 
 ## [0.11.0] - 2026-11-25

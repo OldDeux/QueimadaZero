@@ -4,6 +4,22 @@ Registro das alterações realizadas no projeto **QueimadaZero**.
 
 O formato é baseado em [Keep a Changelog](https://keepachangelog.com/pt-BR/1.1.0/).
 
+## [Unreleased]
+
+Primeira etapa visual do fluxo "Estou vendo fumaça" (#12).
+
+### Adicionado
+
+* Formulário com etapas para foto, localização e descrição opcional.
+* Botões de foto e envio desativados enquanto as integrações não estão prontas, com avisos claros na tela.
+* Testes de interface, preenchimento da descrição e tela pequena.
+
+### Pendente
+
+* Câmera, GPS, envio real da denúncia e fila offline.
+
+---
+
 ## [0.11.0] - 2026-11-25
 
 Tela de dicas respiratórias (#13).

@@ -34,3 +34,10 @@ final class CacheFailure extends Failure {
 final class UnexpectedFailure extends Failure {
   const UnexpectedFailure([super.message = 'Ocorreu um erro inesperado.']);
 }
+
+/// Sem permissão de localização ou com o GPS do celular desligado.
+final class LocalizacaoFailure extends Failure {
+  const LocalizacaoFailure([
+    super.message = 'Não foi possível obter sua localização.',
+  ]);
+}

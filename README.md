@@ -101,6 +101,7 @@ Os principais arquivos de documentação são:
 * `docs/justificativas.md` — justificativas das decisões de UI/UX;
 * `docs/arquitetura.md` — Clean Architecture do app e como criar uma funcionalidade;
 * `docs/navegacao.md` — fluxo de navegação, rotas e tema do app;
+* `docs/localizacao.md` — como o app usa o GPS e respeita a escolha de desligar a localização;
 * `CHANGELOG.md` — registro das alterações feitas no projeto.
 
 O código do aplicativo fica em `app/`, e o ambiente para rodá-lo está em `Dockerfile` e `docker-compose.yml` (veja [Ambiente de desenvolvimento](#ambiente-de-desenvolvimento)).

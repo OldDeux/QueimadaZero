@@ -7,6 +7,7 @@ import '../../features/denuncia/presentation/pages/meus_relatos_page.dart';
 import '../../features/denuncia/presentation/pages/relatar_page.dart';
 import '../../features/dicas/presentation/pages/dicas_page.dart';
 import '../../features/focos/presentation/pages/mapa_page.dart';
+import '../../features/localizacao/presentation/pages/permissao_localizacao_page.dart';
 import '../../features/qualidade_ar/presentation/pages/qualidade_ar_page.dart';
 import '../presentation/app_shell.dart';
 import 'rotas.dart';
@@ -66,6 +67,10 @@ final routerProvider = Provider<GoRouter>((ref) {
       GoRoute(
         path: Rotas.configuracoes,
         builder: (context, state) => const ConfiguracoesPage(),
+      ),
+      GoRoute(
+        path: Rotas.permissaoLocalizacao,
+        builder: (context, state) => const PermissaoLocalizacaoPage(),
       ),
     ],
   );

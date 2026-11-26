@@ -4,6 +4,23 @@ Registro das alterações realizadas no projeto **QueimadaZero**.
 
 O formato é baseado em [Keep a Changelog](https://keepachangelog.com/pt-BR/1.1.0/).
 
+## [Unreleased]
+
+Compilação Web e APK de debug com Docker (#35).
+
+### Adicionado
+
+* Plataforma Android gerada para o projeto Flutter (`app/android/`).
+* Serviço `flutter-android` no Docker Compose, com Java e Android SDK, separado da imagem usada no desenvolvimento Web.
+* Comandos no README para gerar Web, compilar APK de debug e instalar no celular.
+
+### Validado
+
+* `flutter build web` e `flutter build apk --debug` concluídos com sucesso pelo Docker.
+* APK instalado e aberto em um celular Android; navegação entre as telas verificada em 26/11/2026.
+
+---
+
 ## [0.11.0] - 2026-11-25
 
 Tela de dicas respiratórias (#13).

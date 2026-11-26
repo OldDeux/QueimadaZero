@@ -4,6 +4,19 @@ Registro das alterações realizadas no projeto **QueimadaZero**.
 
 O formato é baseado em [Keep a Changelog](https://keepachangelog.com/pt-BR/1.1.0/).
 
+## [0.10.0] - 2026-11-26
+
+Integração de dados ambientais com Open-Meteo (#17).
+
+### Adicionado
+
+* `EnvironmentService` para consultar dados de qualidade do ar (US AQI e PM2.5) e vento (velocidade e direção) pela API Open-Meteo.
+* Conversão das respostas das APIs para o modelo `EnvironmentalData`.
+* Timeout de 10 segundos e tratamento de falhas de conexão, erros HTTP e respostas inválidas.
+* Atualização automática dos dados ambientais a cada 5 minutos.
+* Gerenciamento do encerramento do cliente HTTP e do temporizador pelo provider.
+* Testes unitários para combinação dos dados, erro HTTP 500, timeout e resposta inválida.
+
 ## [0.9.0] - 2026-11-19
 
 Gerência de estado com Riverpod (#7).

@@ -4,19 +4,67 @@ Registro das alterações realizadas no projeto **QueimadaZero**.
 
 O formato é baseado em [Keep a Changelog](https://keepachangelog.com/pt-BR/1.1.0/).
 
-## [Unreleased]
+## [0.12.0] - 2026-11-26
 
-Primeira etapa visual do fluxo "Estou vendo fumaça" (#12).
+Geolocalização em tempo real com opção de desativar (#20).
 
 ### Adicionado
 
-* Formulário com etapas para foto, localização e descrição opcional.
-* Botões de foto e envio desativados enquanto as integrações não estão prontas, com avisos claros na tela.
-* Testes de interface, preenchimento da descrição e tela pequena.
+* Feature `localizacao`, nas camadas `domain`, `data` e `presentation`, com os pacotes `geolocator` (GPS) e `shared_preferences` (escolha salva no celular).
+* Tela que explica para que o app usa a localização antes de o celular pedir a permissão, como no protótipo. Se a permissão for negada ou o GPS estiver desligado, a tela diz o que fazer.
+* Tela de configurações com a chave "Usar minha localização". Ligada, mostra a precisão do GPS e a hora da última posição.
+* `VerificarRastreamento`, que os alertas em segundo plano (#21 e #22) devem chamar antes de usar a posição.
+* Falha `LocalizacaoFailure` e exceção `LocalizacaoException` em `core/error/`.
+* 10 testes de localização, com GPS de mentira: ligar, desligar, "Agora não", permissão bloqueada, GPS desligado no meio do uso e erro ao ler a escolha salva.
+* `docs/localizacao.md` com o funcionamento e as regras de privacidade.
+
+### Observações
+
+* A localização começa desligada, e o GPS só é acionado com ela ligada. Ao desligar, o GPS para na hora.
+* As permissões do Android entram junto com a pasta `android/`, na issue #35.
+
+---
+
+## [Unreleased]
+
+
+
+### Adicionado
+
+Primeira etapa da interface de relato de fumaça (#12).
+
+* Implementação visual da tela "Estou vendo fumaça".
+* Organização do formulário com foto, localização e descrição opcional.
+* Indicação das funcionalidades ainda em desenvolvimento.
+* Ajustes de responsividade para dispositivos móveis.
+* Testes automatizados da interface.
 
 ### Pendente
 
-* Câmera, GPS, envio real da denúncia e fila offline.
+* Integração real com câmera e GPS.
+* Envio e armazenamento das ocorrências.
+
+Primeira etapa da tela de notificações e alertas (#14).
+
+### Adicionado
+
+* Tela de alertas com mensagem de histórico vazio e informação sobre a integração futura das notificações.
+* Tela de meus relatos com estado vazio e explicação dos status `Enviado` e `Na fila`.
+* Testes de interface e adaptação em telas pequenas.
+
+### Pendente
+
+* Integração com alertas e denúncias reais e armazenamento offline.
+
+### Alterado
+
+Atualização da documentação da Unidade II (#31).
+
+* `docs/requisitos.md`: situação das funcionalidades em relação às issues e aos PRs atuais.
+* `docs/personas.md`: relação de Ana Maria e Joaquim com as telas implementadas e planejadas.
+* `docs/pesquisa.md`: revisão do portal de dados do INPE e do papel do Prevfogo/IBAMA.
+* `docs/justificativas.md`: decisões de interface, estado e integrações técnicas da Unidade II.
+* `README.md`: contribuições registradas e instruções para executar o Flutter Web pelo Docker.
 
 ---
 

@@ -221,10 +221,20 @@ O aplicativo pode contribuir principalmente ao aproximar os dados de monitoramen
 
 ---
 
+### Revisão das fontes para a Unidade II (26/11/2026)
+
+O portal de Dados Abertos do INPE [1] disponibiliza focos de queimadas em arquivos CSV e KML, em períodos como diário e quase tempo real. Esses dados são uma referência para a futura integração de focos (#16), mas ainda não estão sendo exibidos no mapa do aplicativo.
+
+O Prevfogo do IBAMA [6] contribui para o entendimento das ações de prevenção, manejo integrado do fogo e combate aos incêndios florestais. Essa fonte dá contexto à pesquisa, mas não deve ser confundida com uma API de focos de calor.
+
+Ao integrar dados externos, o projeto deverá indicar fonte e horário de atualização, além de diferenciar informações atuais de dados em cache. Isso se relaciona às issues #16, #17 e #18.
+
+---
+
 ## 9. Fontes utilizadas
 
 **[1] INPE — Programa Queimadas. Dados Abertos — Focos de Queimadas e Incêndios.**
-Disponível em: https://terrabrasilis.dpi.inpe.br/queimadas/portal/dados-abertos/
+Disponível em: https://data.inpe.br/queimadas/portal/dados-abertos/
 
 **[2] INPE — Programa Queimadas. Evento de Fogo.**
 Disponível em: https://data.inpe.br/queimadas/portal/evento-fogo/

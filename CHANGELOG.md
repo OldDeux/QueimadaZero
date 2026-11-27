@@ -27,6 +27,23 @@ Geolocalização em tempo real com opção de desativar (#20).
 
 ## [Unreleased]
 
+
+
+### Adicionado
+
+Primeira etapa da interface de relato de fumaça (#12).
+
+* Implementação visual da tela "Estou vendo fumaça".
+* Organização do formulário com foto, localização e descrição opcional.
+* Indicação das funcionalidades ainda em desenvolvimento.
+* Ajustes de responsividade para dispositivos móveis.
+* Testes automatizados da interface.
+
+### Pendente
+
+* Integração real com câmera e GPS.
+* Envio e armazenamento das ocorrências.
+
 Primeira etapa da tela de notificações e alertas (#14).
 
 Compilação Web e APK de debug com Docker (#35).
@@ -49,7 +66,6 @@ Compilação Web e APK de debug com Docker (#35).
 ### Pendente
 
 * Integração com alertas e denúncias reais e armazenamento offline.
-
 
 ### Alterado
 

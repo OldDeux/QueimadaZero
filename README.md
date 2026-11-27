@@ -149,7 +149,7 @@ Todo PR para a `main` roda o workflow [CI](.github/workflows/ci.yml) no GitHub A
 * A pasta `app/` é compartilhada com o container: o código é editado normalmente na sua máquina, no editor de sua preferência.
 * Os pacotes baixados ficam no volume `pub-cache`, então o `pub get` só baixa o que mudou.
 * No Git Bash do Windows, se algum caminho for convertido de forma errada, rode antes `export MSYS_NO_PATHCONV=1`.
-* O container não abre o app em emulador Android nem instala um APK no celular. A geração do APK e o build web de distribuição ficam para a issue #35.
+* O Docker prepara as versões Web e Android para testes; ele não inicia um emulador nem abre o aplicativo diretamente no celular.
 
 ### Visualizar o aplicativo no navegador
 
@@ -160,6 +160,29 @@ docker compose run --rm -p 8080:8080 flutter run -d web-server --web-hostname=0.
 ```
 
 Abra `http://127.0.0.1:8080` no navegador do mesmo computador e mantenha o terminal em execução. Esse comando serve o app em modo de desenvolvimento; não gera um pacote de produção.
+
+### Compilar a versão Web
+
+Na raiz do repositório, com o Docker em execução:
+
+```bash
+docker compose run --rm flutter build web
+```
+
+Os arquivos compilados são gerados em `app/build/web/`.
+
+### Gerar e instalar o APK de teste (Android)
+
+A pasta `app/android/` faz parte do projeto. Para gerar um APK de debug com o Android SDK dentro do Docker:
+
+```bash
+docker compose build flutter-android
+docker compose run --rm flutter-android build apk --debug
+```
+
+O APK é gerado em `app/build/app/outputs/flutter-apk/app-debug.apk` na máquina local (a pasta `app/` está compartilhada com o container). Para instalar em um celular Android, transfira o arquivo via USB ou outro meio de sua confiança, abra-o no aparelho e autorize a instalação pela origem utilizada caso o sistema solicite. Desative a autorização após o teste.
+
+Essa é uma compilação **de debug**, destinada a testes e demonstrações, não à publicação na Play Store. A instalação e a navegação entre as telas foram verificadas em um aparelho Android em 26/11/2026 (issue #35). Funcionalidades ainda marcadas como "Em construção" dependem das respectivas issues e de PRs que ainda não foram incorporados à `main`.
 
 ## Repositório
 

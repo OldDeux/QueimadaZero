@@ -1,10 +1,23 @@
 services:
   flutter:
-    build: .
+    build:
+      context: .
+      target: flutter-base
     image: queimadazero-flutter:3.47.9
     volumes:
       - ./app:/workspace/app
       - pub-cache:/root/.pub-cache
 
+  flutter-android:
+    build:
+      context: .
+      target: android
+    image: queimadazero-flutter-android:3.47.9
+    volumes:
+      - ./app:/workspace/app
+      - pub-cache:/root/.pub-cache
+      - gradle-cache:/root/.gradle
+
 volumes:
   pub-cache:
+  gradle-cache:

@@ -29,11 +29,22 @@ Geolocalização em tempo real com opção de desativar (#20).
 
 Primeira etapa da tela de notificações e alertas (#14).
 
+Compilação Web e APK de debug com Docker (#35).
+
 ### Adicionado
 
 * Tela de alertas com mensagem de histórico vazio e informação sobre a integração futura das notificações.
 * Tela de meus relatos com estado vazio e explicação dos status `Enviado` e `Na fila`.
 * Testes de interface e adaptação em telas pequenas.
+
+* Plataforma Android gerada para o projeto Flutter (`app/android/`).
+* Serviço `flutter-android` no Docker Compose, com Java e Android SDK, separado da imagem usada no desenvolvimento Web.
+* Comandos no README para gerar Web, compilar APK de debug e instalar no celular.
+
+### Validado
+
+* `flutter build web` e `flutter build apk --debug` concluídos com sucesso pelo Docker.
+* APK instalado e aberto em um celular Android; navegação entre as telas verificada em 26/11/2026.
 
 ### Pendente
 

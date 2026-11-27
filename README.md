@@ -73,6 +73,16 @@ Responsável por:
 * Definição da funcionalidade mais importante, relação com o problema/pesquisa e considerações finais;
 * Criação e organização do protótipo de baixa fidelidade.
 
+## Contribuições da Unidade II
+
+A evolução do aplicativo é acompanhada nas [issues](https://github.com/OldDeux/QueimadaZero/issues), nos pull requests e no [Project da Unidade II](https://github.com/users/marcos-grocha/projects/4).
+
+- `lauralimab`: tela de dicas respiratórias (#13, PR #43 incorporado à `main`).
+- `lauralimab`: primeira etapa visual de Alertas e Meus relatos (#14, PR #44 em revisão; integração real pendente).
+- `lauralimab`: atualização da documentação da Unidade II (#31, nesta branch).
+
+Esses registros complementam as responsabilidades das atividades anteriores, apresentadas acima.
+
 ## Organização do projeto
 
 A documentação das atividades está sendo organizada dentro do repositório para manter as contribuições do grupo registradas e facilitar o acompanhamento das alterações realizadas durante o desenvolvimento.
@@ -91,6 +101,7 @@ Os principais arquivos de documentação são:
 * `docs/justificativas.md` — justificativas das decisões de UI/UX;
 * `docs/arquitetura.md` — Clean Architecture do app e como criar uma funcionalidade;
 * `docs/navegacao.md` — fluxo de navegação, rotas e tema do app;
+* `docs/localizacao.md` — como o app usa o GPS e respeita a escolha de desligar a localização;
 * `CHANGELOG.md` — registro das alterações feitas no projeto.
 
 O código do aplicativo fica em `app/`, e o ambiente para rodá-lo está em `Dockerfile` e `docker-compose.yml` (veja [Ambiente de desenvolvimento](#ambiente-de-desenvolvimento)).
@@ -129,6 +140,27 @@ Antes de abrir um PR, formate o código, senão o CI falha:
 docker compose run --rm --entrypoint dart flutter format lib test
 ```
 
+### CI
+
+Todo PR para a `main` roda o workflow [CI](.github/workflows/ci.yml) no GitHub Actions, que verifica a formatação, roda o `flutter analyze` e o `flutter test`. A versão do Flutter é lida do `Dockerfile`, então o CI usa sempre a mesma do ambiente local. Se o CI falhar, o resultado aparece no próprio PR.
+
+### Observações
+
+* A pasta `app/` é compartilhada com o container: o código é editado normalmente na sua máquina, no editor de sua preferência.
+* Os pacotes baixados ficam no volume `pub-cache`, então o `pub get` só baixa o que mudou.
+* No Git Bash do Windows, se algum caminho for convertido de forma errada, rode antes `export MSYS_NO_PATHCONV=1`.
+* O Docker prepara as versões Web e Android para testes; ele não inicia um emulador nem abre o aplicativo diretamente no celular.
+
+### Visualizar o aplicativo no navegador
+
+Com o Docker Desktop em execução, na raiz do repositório:
+
+```bash
+docker compose run --rm -p 8080:8080 flutter run -d web-server --web-hostname=0.0.0.0 --web-port=8080
+```
+
+Abra `http://127.0.0.1:8080` no navegador do mesmo computador e mantenha o terminal em execução. Esse comando serve o app em modo de desenvolvimento; não gera um pacote de produção.
+
 ### Compilar a versão Web
 
 Na raiz do repositório, com o Docker em execução:
@@ -137,13 +169,7 @@ Na raiz do repositório, com o Docker em execução:
 docker compose run --rm flutter build web
 ```
 
-Os arquivos compilados são gerados em `app/build/web/`. Para visualizar o aplicativo durante o desenvolvimento, utilize:
-
-```bash
-docker compose run --rm -p 8080:8080 flutter run -d web-server --web-hostname=0.0.0.0 --web-port=8080
-```
-
-Abra `http://127.0.0.1:8080` no navegador e mantenha o terminal do Flutter Web em execução. Esse servidor é para desenvolvimento, não para hospedagem de produção.
+Os arquivos compilados são gerados em `app/build/web/`.
 
 ### Gerar e instalar o APK de teste (Android)
 
@@ -157,17 +183,6 @@ docker compose run --rm flutter-android build apk --debug
 O APK é gerado em `app/build/app/outputs/flutter-apk/app-debug.apk` na máquina local (a pasta `app/` está compartilhada com o container). Para instalar em um celular Android, transfira o arquivo via USB ou outro meio de sua confiança, abra-o no aparelho e autorize a instalação pela origem utilizada caso o sistema solicite. Desative a autorização após o teste.
 
 Essa é uma compilação **de debug**, destinada a testes e demonstrações, não à publicação na Play Store. A instalação e a navegação entre as telas foram verificadas em um aparelho Android em 26/11/2026 (issue #35). Funcionalidades ainda marcadas como "Em construção" dependem das respectivas issues e de PRs que ainda não foram incorporados à `main`.
-
-### CI
-
-Todo PR para a `main` roda o workflow [CI](.github/workflows/ci.yml) no GitHub Actions, que verifica a formatação, roda o `flutter analyze` e o `flutter test`. A versão do Flutter é lida do `Dockerfile`, então o CI usa sempre a mesma do ambiente local. Se o CI falhar, o resultado aparece no próprio PR.
-
-### Observações
-
-* A pasta `app/` é compartilhada com o container: o código é editado normalmente na sua máquina, no editor de sua preferência.
-* Os pacotes baixados ficam no volume `pub-cache`, então o `pub get` só baixa o que mudou.
-* No Git Bash do Windows, se algum caminho for convertido de forma errada, rode antes `export MSYS_NO_PATHCONV=1`.
-* O Docker prepara as versões Web e Android para testes; ele não inicia um emulador nem abre o aplicativo diretamente no celular.
 
 ## Repositório
 

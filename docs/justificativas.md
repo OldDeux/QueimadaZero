@@ -172,3 +172,19 @@ Algumas coisas mudaram entre as duas versões depois que conferimos o protótipo
 - **O relato era em 3 telas** (foto, local e envio, como estava no estudo de caso) **e virou uma tela só**, com os 3 passos numerados. Ficou mais rápido e a pessoa vê tudo antes de enviar.
 - **Entraram telas que faltavam:** permissão de localização, notificação com o celular bloqueado, mapa sem internet, configurações e confirmação antes de excluir um relato.
 - **Os focos ganharam etiqueta com o nível escrito**, para não depender só da cor.
+
+## 10. Decisões revisadas durante a Unidade II (26/11/2026)
+
+### Urgência e legibilidade
+
+A implementação do tema claro com texto escuro e destaques em laranja/vermelho mantém a proposta do protótipo (#15). A navegação com quatro abas e os botões de acesso rápido reduzem os passos para chegar às funções principais. A tela de dicas respiratórias (#13) separa cuidados gerais das recomendações para asma e DPOC, com textos e ícones nos cards.
+
+### Estado e organização técnica
+
+O Riverpod foi adotado para a gerência de estado (#7), e a estrutura em camadas por funcionalidade segue a Clean Architecture (#6). O componente `AsyncValueView` padroniza carregamento, erro e falta de conexão; isso facilita testar o comportamento da interface sem depender de serviços externos.
+
+### Dados ambientais e agrupamento de ocorrências
+
+A integração ambiental está em desenvolvimento no PR #41 (#17). Ainda é necessário definir como apresentar ao usuário o índice e a origem dos dados, incluindo o horário de atualização. O agrupamento por distância e tempo (#24) continua planejado: a ideia é evitar vários marcadores ou alertas para uma mesma ocorrência, sem esconder a quantidade de denúncias consideradas.
+
+As referências a Firebase, GPS, envio de relatos, alertas automáticos e mapas offline nas seções anteriores representam a arquitetura planejada, não funcionalidades já concluídas na `main`.
